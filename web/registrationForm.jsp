@@ -1,0 +1,197 @@
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        
+        <link rel="stylesheet" href="css/stylesheet.css">
+        
+    </head>
+    <body>
+       
+        <div class="container">
+       <form class="form-horizontal">
+  <fieldset>
+    <legend>Registration Form</legend>
+    
+    <div class="form-group">
+      <label for="name" class="col-lg-2 control-label">Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="name" placeholder="Name">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Sex</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="sexRadio" id="sexRadio1" value="male" checked="">
+            Male
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="sexRadio" id="sexRadio21" value="female">
+            Female
+          </label>
+        </div>
+          <div class="radio">
+          <label>
+            <input type="radio" name="sexRadio" id="sexRadio3" value="transgender">
+            Trans-gender
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="dob" class="col-lg-2 control-label">Date of Birth</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="dob" placeholder="dd-mm-yyyy">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="fname" class="col-lg-2 control-label">Father's Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="fname" placeholder="Father's Name">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="mname" class="col-lg-2 control-label">Mother's Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="mname" placeholder="Mother's Name">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="add_present" class="col-lg-2 control-label">Present Address</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="add_present"></textarea>
+        <span class="help-block">Hostlers to mention their hostel address.</span>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="add_permanent" class="col-lg-2 control-label">Permanent Address</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="add_permanent"></textarea>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="reg_no" class="col-lg-2 control-label">University Registration No.</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="reg_no" placeholder="University Registration No.">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="roll_no" class="col-lg-2 control-label">College Roll No.</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="roll_no" placeholder="College Roll No.">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="branch" class="col-lg-2 control-label">Branch</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="branch" placeholder="Branch">
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="uid" class="col-lg-2 control-label">UID</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="uid" placeholder="UID/Adhar card Number">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="mobile_no" class="col-lg-2 control-label">Mobile No.</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="mobile_no" placeholder="Mobile No.">
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="pmobile_no" class="col-lg-2 control-label">Parent's Mobile No.</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="pmobile_no" placeholder="Parent's Mobile No.">
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="email" class="col-lg-2 control-label">Email Id</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="email" placeholder="email">
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="categorySelect" class="col-lg-2 control-label">Category</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="categorySelect">
+          <option>General</option>
+          <option>SC</option>
+          <option>ST</option>
+          <option>OBC</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Hostler</label>
+      <div class="col-lg-10">
+        <div class="radio">
+          <label>
+            <input type="radio" name="hostlerRadio" id="optionsRadios1" value="1" checked="">
+            Yes
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="hostlerRadio" id="optionsRadios2" value="0">
+            No
+          </label>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <label for="batch" class="col-lg-2 control-label">Batch</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="batch" placeholder="Batch (StartingYear-EndingYear)YYYY-YYYY ">
+      </div>
+    </div>
+    
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+        
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+        </div>
+    </body>
+</html>
