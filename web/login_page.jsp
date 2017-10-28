@@ -46,7 +46,7 @@
         if(rs.next())
         {
             session.setAttribute("username", username);
-            response.sendRedirect("Home.jsp");
+            response.sendRedirect("student_home.jsp");
         }
         else
         {
