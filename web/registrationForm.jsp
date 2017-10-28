@@ -11,13 +11,12 @@
     </head>
     
     <body>
-       <%@include file="ConnectPage.jsp" %>
         
         
         
         
         <div class="container">
-       <form class="form-horizontal">
+    <form action="signup.jsp" class="form-horizontal" method="post">
   <fieldset>
     <legend>Registration Form</legend>
     
@@ -195,57 +194,6 @@
     </div>
   </fieldset>
 </form>
-        
-            
-             <%
-        if(request.getParameter("btnSubmit")!=null) 
-           {
-               String name,sex,dob,f_name, m_name,add_present, add_permanent, reg_no, roll_no, branch, uid,email, category, batch;
-               int mobile ,parent_mobile,hostler;
-               
-               name=request.getParameter("tbName");
-               sex=request.getParameter("sexRadio");
-               dob=request.getParameter("tbDob");
-               f_name=request.getParameter("tbFname");
-               m_name=request.getParameter("tbMname");
-               add_present=request.getParameter("txtAddPresent");
-               add_permanent=request.getParameter("txtAddPermanent");
-               reg_no=request.getParameter("tbRegNo");
-               roll_no=request.getParameter("tbRollNo");
-               branch=request.getParameter("tbBranch");
-               uid=request.getParameter("tbUID");
-               mobile=Integer.parseInt(request.getParameter("tbMobile"));
-               parent_mobile=Integer.parseInt(request.getParameter("tbPmobile"));
-               email=request.getParameter("tbEmail");
-               category=request.getParameter("categorySelect");
-               hostler=Integer.parseInt(request.getParameter("hostlerRadio"));
-               batch=request.getParameter("tbBatch");
-               
-               
-               try
-               {
-                   
-                   smt=con.createStatement();
-                   String qry ="insert into student values('"+name+"','"+sex+"','"+dob+"','"+f_name+"', '"+m_name+"','"+add_present+"', '"+add_permanent+"', '"+reg_no+"', '"+roll_no+"','"+ branch+"', '"+uid+"',"+mobile+","+parent_mobile+",'"+email+"', '"+category+"',"+hostler+" ,'"+batch+"')" ;
-                   int r=smt.executeUpdate(qry);
-                   if(r>0)
-                   {
-                       out.println("<p>Record has been inserted</p>");
-                   }
-                   
-                   else
-                   {
-                           out.println("<p>Failed</p>");
-                   }
-                   con.close();
-               }
-               
-               catch(Exception ex)
-                       {
-                           out.println("ERROR :<BR><p>"+ex+"</p>");  
-                       }
-           }
-        %>
         
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
