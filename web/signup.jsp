@@ -12,8 +12,8 @@
 <%@include file="ConnectPage.jsp" %>
 
 <%
-    String name,sex,dob,f_name, m_name,add_present, add_permanent, reg_no, roll_no, branch, uid,email, category, batch;
-    int mobile ,parent_mobile,hostler;
+    String name,sex,dob,f_name, m_name,add_present, add_permanent, reg_no, roll_no, branch, uid,email, category, batch, mobile ,parent_mobile;
+    int hostler;
 
     name=request.getParameter("tbname");
     sex=request.getParameter("sexRadio");
@@ -24,10 +24,10 @@
     add_permanent=request.getParameter("txtAddPermanent");
     reg_no=request.getParameter("tbRegNo");
     roll_no=request.getParameter("tbRollNo");
-    branch=request.getParameter("tbBranch");
+    branch=request.getParameter("branchSelect");
     uid=request.getParameter("tbUID");
-    mobile=Integer.parseInt(request.getParameter("tbMobile"));
-    parent_mobile=Integer.parseInt(request.getParameter("tbPmobile"));
+    mobile=request.getParameter("tbMobile");
+    parent_mobile=request.getParameter("tbPmobile");
     email=request.getParameter("tbEmail");
     category=request.getParameter("categorySelect");
     hostler=Integer.parseInt(request.getParameter("hostlerRadio"));
@@ -76,7 +76,7 @@
         // insert into db....
         smt=con.createStatement();
         // TODO: Encrypt passwords using MD5 hash...
-        String qry ="insert into student values('"+name+"','"+sex+"','"+dob+"','"+f_name+"', '"+m_name+"','"+add_present+"', '"+add_permanent+"', '"+reg_no+"', '"+roll_no+"','"+ branch+"', '"+uid+"',"+mobile+","+parent_mobile+",'"+email+"', '"+category+"',"+hostler+" ,'"+batch+"')" ;
+        String qry ="insert into student values('"+name+"','"+sex+"','"+dob+"','"+f_name+"', '"+m_name+"','"+add_present+"', '"+add_permanent+"', '"+reg_no+"', '"+roll_no+"','"+ branch+"', '"+uid+"','"+mobile+"','"+parent_mobile+"','"+email+"', '"+category+"',"+hostler+" ,'"+batch+"')" ;
         int r=smt.executeUpdate(qry);
         if(r>0)
         {
