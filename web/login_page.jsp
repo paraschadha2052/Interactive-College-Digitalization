@@ -45,12 +45,19 @@
         ResultSet rs=smt.executeQuery(qry);
         if(rs.next())
         {
-            session.setAttribute("username", username);
-            response.sendRedirect("student_home.jsp");
+            String verified = rs.getString(4);
+            System.out.println("Verified: "+verified);
+            if(verified.equals("yes")){
+                session.setAttribute("username", username);
+                response.sendRedirect("student_home.jsp");
+            }
+            else{
+                error="Account not verified. Please check your Email.";
+            }
         }
         else
         {
-            error="Sorry. Record not Found.";
+            error="Incorrect username or password. Try again.";
         }
         }
         catch(Exception ex)
@@ -65,7 +72,7 @@
         
         <div class="container">
 
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post">
   <fieldset>
     <legend>Login</legend>
     <div class="form-group">

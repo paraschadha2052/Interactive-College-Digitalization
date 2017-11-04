@@ -75,6 +75,7 @@
         
         // insert into db....
         smt=con.createStatement();
+        // TODO: Encrypt passwords using MD5 hash...
         String qry ="insert into student values('"+name+"','"+sex+"','"+dob+"','"+f_name+"', '"+m_name+"','"+add_present+"', '"+add_permanent+"', '"+reg_no+"', '"+roll_no+"','"+ branch+"', '"+uid+"',"+mobile+","+parent_mobile+",'"+email+"', '"+category+"',"+hostler+" ,'"+batch+"')" ;
         int r=smt.executeUpdate(qry);
         if(r>0)
