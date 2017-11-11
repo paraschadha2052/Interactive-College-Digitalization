@@ -26,7 +26,7 @@
                         rdiv.innerHTML=objrequest.responseText;
                     }  
                 };
-                objrequest.open("GET", "add_product_backend.jsp?i="+str+"",true);
+                objrequest.open("GET", "ajax_registration.jsp?i="+str+"",true);
                 objrequest.send();   
             }
             
