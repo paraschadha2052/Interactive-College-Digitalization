@@ -16,25 +16,23 @@
     <body>
         <%@include file="ConnectPage.jsp" %>
         <%@include file="SesssionCheck.jsp" %>  
-         
+        <p>Welcome</p>
          <%
-        if(request.getParameter("username")!=null)
+         out.println(username);
+        if(username != null)
         {
-            String uname;
-            uname = request.getParameter("username");
-            String qry = "select * from student where roll_no="+uname;
+            out.println("hello");
+            out.println(username);
+            String qry = "select * from student where roll_no='"+username+"'";
             ResultSet rs = smt.executeQuery(qry);
             if(rs.next())
             {
                  %>
             <table class="t1">
-                <%
-                  while(rs.next())
-                  {
-                      %>
+              
                       
                               <tr class="r" ><td>
-                                      <%=rs.getString(1)%>
+                                    HI  <%=rs.getString(1)%>
                           </td>
                           <td>
                                       <%=rs.getString(9)%>
@@ -42,8 +40,7 @@
                           <td>
                                       <%=rs.getString(10)%>
                           </td></tr>
-                <%  } 
-                  %>
+               
             </table>
            <% }
             else
