@@ -29,7 +29,7 @@
         
         
         <div class="container">
-    <form action="save_details.jsp" class="form-horizontal" method="post">
+    <form action="fee_upload_backend.jsp" class="form-horizontal" method="post">
   <fieldset>
     <legend>Edit Details</legend>
     
