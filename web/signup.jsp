@@ -12,6 +12,8 @@
 <%@include file="ConnectPage.jsp" %>
 
 <%
+    out.println("HI");
+
     String name,sex,dob,f_name, m_name,add_present, add_permanent, reg_no, roll_no, branch, uid,email, category, batch, mobile ,parent_mobile;
     int hostler;
 
@@ -40,7 +42,7 @@
         String username = roll_no;
         String baseUrl = "http://localhost:8084/verify.jsp";
         String uuid = UUID.randomUUID().toString().replace("-", "");
-        System.out.println("Verfification hash: "+uuid);
+        out.println("Verfification hash: "+uuid);
 
         final String from = "ccetinfoprovider@gmail.com";
         final String password = "d23j27p40";
