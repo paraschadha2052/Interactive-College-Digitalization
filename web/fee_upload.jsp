@@ -18,18 +18,46 @@
      
         <%@include file="ConnectPage.jsp" %>
         <%
+         if(request.getParameter("btnSubmit")!=null)
+        {
+            String roll_no, sem, bti, file;
+
+            roll_no=request.getParameter("tbRollNo");
+            sem=request.getParameter("semesterSelect");
+            bti=request.getParameter("tbBTI");
+            file=request.getParameter("pdf");
+                // insert into db....
+                smt=con.createStatement();
+                // TODO: Encrypt passwords using MD5 hash...
+                String qry ="insert into fee_recipt values('"+roll_no+"','"+file+"','"+bti+"','"+sem+"')" ;
+                int r=smt.executeUpdate(qry);
+                if(r>0)
+                {
+                    %>
+                <script>alert("Record Added");</script>
+                    <%
+                }
+
+                else
+                {
+                       %>
+                <script>alert("Record Adding Failed");</script>
+                       <%
+                }
+        }
          String i, j;
-         i="CO14327";
+         i="CO14340";
          j="14-CET-87";
                  
                    String qry ="select * from student where roll_no='"+i+"'";
+                   smt = con.createStatement(); 
                    ResultSet rs=smt.executeQuery(qry);    //resulset is set of records
                    rs.next();
-                   %>      
+        %>      
         
         
         <div class="container">
-    <form action="fee_upload_backend.jsp" class="form-horizontal" method="post">
+    <form class="form-horizontal" method="post">
   <fieldset>
     <legend>Edit Details</legend>
     
@@ -87,7 +115,7 @@
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" name="btnSubmit">Save</button>
       </div>
     </div>
   </fieldset>
