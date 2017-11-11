@@ -10,8 +10,32 @@
 <%@page import="javax.mail.*"%>
 <%@page import="javax.mail.internet.*"%>
 
-<%@include file="ConnectPage.jsp" %>
 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>JSP Page</title>
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+         <script type="text/javascript">
+            function added()
+            {               
+                alert("Record Added");  
+            }
+            function notAdded()
+            {               
+                alert("Record Adding Failed");  
+            }
+        </script>
+        <link href="admincss.css" rel="stylesheet">
+     </head>
+   
+     <body>    
+
+<%@include file="ConnectPage.jsp" %>
 <%
     
     String roll_no, sem, bti, file;
@@ -31,12 +55,19 @@
         int r=smt.executeUpdate(qry);
         if(r>0)
         {
-            out.println("<p>Record has been inserted</p>");
+            %>
+            added()
+            <%
         }
 
         else
         {
-                out.println("<p>Failed</p>");
+               %>
+               notAdded()
+               <%
         }
         con.close();
 %>
+
+     </body>  
+</html>
