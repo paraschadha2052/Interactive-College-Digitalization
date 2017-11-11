@@ -7,7 +7,31 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         
-        <link rel="stylesheet" href="css/stylesheet.css">
+ 
+            
+      <script type="text/javascript">
+            function checkId(str)
+            {
+                
+                var rdiv=document.getElementById("resultDiv");
+                var objrequest=new XMLHttpRequest();  //server ko bhejna request
+                objrequest.onreadystatechange=function()
+                {
+                    //event ki binding hori h jb readystatechange hoga
+                    //function khud fire hoga
+                    if(objrequest.readyState===4 && objrequest.status===200)
+                    {
+                        //request phuncha ya ni phuncha?
+                        //phunch gya to
+                        rdiv.innerHTML=objrequest.responseText;
+                    }  
+                };
+                objrequest.open("GET", "add_product_backend.jsp?i="+str+"",true);
+                objrequest.send();   
+            }
+            
+        </script>
+                 <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     
     <body>
@@ -97,8 +121,11 @@
     <div class="form-group">
       <label for="roll_no" class="col-lg-2 control-label">College Roll No.</label>
       <div class="col-lg-10">
-          <input type="text" name="tbRollNo" class="form-control" id="roll_no" placeholder="College Roll No.">
+          
+          <input type="text" name="tbRollNo" class="form-control" id="roll_no" onkeyup="checkId(this.value)" placeholder="College Roll No.">
+          <br> <div  id="resultDiv"> </div>  
       </div>
+    
     </div>
     
     <div class="form-group">
