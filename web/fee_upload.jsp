@@ -15,7 +15,7 @@
       
       
       <body>
-     
+     <%@include file="student_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
         <%
          if(request.getParameter("btnSubmit")!=null)
@@ -46,7 +46,7 @@
                 }
         }
          String i, j;
-         i="CO14340";
+         i="CO14327";
          j="14-CET-87";
                  
                    String qry ="select * from student where roll_no='"+i+"'";
