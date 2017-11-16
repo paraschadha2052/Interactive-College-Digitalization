@@ -14,7 +14,7 @@
     </head>
     
     <body>
-       
+       <%@include file="student_header.jsp" %>
       <%@include file="ConnectPage.jsp" %>
         <%
          String i, j;
