@@ -6902,3 +6902,8 @@ label {
 .pager .disabled > a {
   border-color: #dddddd;
 }
+
+.head3
+{
+    color:black; font-family: 'Comic Sans MS';
+}
