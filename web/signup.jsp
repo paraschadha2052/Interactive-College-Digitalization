@@ -39,6 +39,7 @@
 
     try
     {    
+        System.out.println("Trying to send mail ...");
         String username = roll_no;
         String baseUrl = "http://localhost:8084/verify.jsp";
         String uuid = UUID.randomUUID().toString().replace("-", "");
@@ -50,30 +51,38 @@
         String sub = "Email Verification !";
         String msg = "Please verify your email id by clicking the below link:\n"
                 + baseUrl + "?username="+username+"&hash="+uuid;
+       
+        Properties props = new Properties();
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.socketFactory.port", "465");
+        props.put("mail.smtp.socketFactory.class",
+                        "javax.net.ssl.SSLSocketFactory");
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.port", "465");
 
+        Session sess = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                                return new PasswordAuthentication(from,password);
+                        }
+                });
 
-        Properties props = new Properties();    
-        props.put("mail.smtp.host", "smtp.gmail.com");    
-        props.put("mail.smtp.socketFactory.port", "465");    
-        props.put("mail.smtp.socketFactory.class",    
-                  "javax.net.ssl.SSLSocketFactory");    
-        props.put("mail.smtp.auth", "true");    
-        props.put("mail.smtp.port", "465");    
+        try {
 
-        Session sess = Session.getDefaultInstance(props,    
-         new javax.mail.Authenticator() {    
-         protected PasswordAuthentication getPasswordAuthentication() {    
-         return new PasswordAuthentication(from,password);  
-         }    
-        });
-        
-        MimeMessage message = new MimeMessage(sess);    
-        message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));    
-        message.setSubject(sub);    
-        message.setText(msg);    
+                Message message = new MimeMessage(sess);
+                message.setFrom(new InternetAddress(from));
+                message.setRecipients(Message.RecipientType.TO,
+                                InternetAddress.parse(to));
+                message.setSubject(sub);
+                message.setText(msg);
 
-        Transport.send(message);    
-        System.out.println("message sent successfully");
+                Transport.send(message);
+
+                System.out.println("Done");
+
+        } catch (MessagingException e) {
+                throw new RuntimeException(e);
+        }
         
         // insert into db....
         smt=con.createStatement();
