@@ -20,7 +20,7 @@
             }
             else
             {
-                response.sendRedirect("login_page.jsp");
+                response.sendRedirect("Generic_login_home.jsp");
             }
             
             %>

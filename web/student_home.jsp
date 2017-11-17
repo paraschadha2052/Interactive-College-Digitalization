@@ -29,7 +29,11 @@
                 
                  %>
                  <div class="container-fluid">
-                     <h3 class="head3">Welcome <%=rs.getString(1)%>!! <br> I hope <%=rs.getString(1)%> is going well for you. Happy Engineering :)</h3>
+                 <blockquote class="blockquote">
+                    <p>Welcome <%=rs.getString(1)%>!! <br>View and Manage your Academic Details anytime, anywhere!</p>
+                 </blockquote>
+                     
+                     
                  <% } 
         }
             else

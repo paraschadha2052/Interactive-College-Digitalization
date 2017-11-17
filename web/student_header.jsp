@@ -15,7 +15,7 @@
         
     </head>
     <body>
-      
+       
         
         <div class="row container-fluid" style="background-color: black">
               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,7 +30,7 @@
         <li><a href="edit_student_details.jsp" style="color: wheat">EDIT DETAILS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+        <li><a href="logout.jsp" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
   </div>
 </nav>

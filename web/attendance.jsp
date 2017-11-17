@@ -16,9 +16,10 @@
     </head>
     <body>
         <div class="container-fluid">
+        <%@include file="SesssionCheck.jsp" %> 
         <%@include file="student_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
-        <%@include file="SesssionCheck.jsp" %>  
+         
      
          <%
         if(username != null)
@@ -84,7 +85,10 @@
                      %>
         </tbody>
     </table> 
-                     <h3 class="head3">  Happy Engineering :)</h3>
+        <div class="text-warning">
+            <p>Maintain 75% attendance in all subjects during the course of your semester as mandatory condition for appearing in INTERNAL & EXTERNAL EXAMINATION.</p>
+        </div>
+                     
                  </div>
            
                 <% 
