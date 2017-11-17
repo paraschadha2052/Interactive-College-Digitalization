@@ -65,10 +65,10 @@
       <td><%=rs1.getString(3)%></td>
       <td><%=rs1.getString(4)%></td>
     </tr>
-            <% 
-            i=i+1;
-            } 
-            %>
+    <%
+    i=i+1;
+                }
+    %>
   </tbody>
 </table> 
   <h3 class="head3">  Happy Engineering :)</h3>
