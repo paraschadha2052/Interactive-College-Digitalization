@@ -41,7 +41,7 @@
     {    
         System.out.println("Trying to send mail ...");
         String username = roll_no;
-        String baseUrl = "http://localhost:8084/verify.jsp";
+        String baseUrl = "http://localhost:22186/Interactive-College-Digitalization/verify.jsp";
         String uuid = UUID.randomUUID().toString().replace("-", "");
         out.println("Verfification hash: "+uuid);
 
