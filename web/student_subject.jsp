@@ -21,6 +21,7 @@
             
         <%@include file="student_header.jsp" %>
         <%@include file="SesssionCheck.jsp" %> 
+        <%@include file="HeaderPage.jsp" %>
         
           <%
           

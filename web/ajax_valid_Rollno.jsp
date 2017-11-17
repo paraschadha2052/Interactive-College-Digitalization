@@ -6,7 +6,6 @@
 
         <%
             String rollno = request.getParameter("rollno");
-            String pRollno = "/^[0-9a-zA-Z]+$/";
             
             int l=rollno.length();
             if(l>0)

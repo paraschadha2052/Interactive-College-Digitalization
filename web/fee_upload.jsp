@@ -18,6 +18,7 @@
       <body>
      <%@include file="student_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
+        <%@include file="HeaderPage.jsp" %>
         <%
          if(request.getParameter("btnSubmit")!=null)
         {

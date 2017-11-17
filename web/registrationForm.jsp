@@ -28,7 +28,7 @@
                         rdiv.innerHTML=objrequest.responseText;
                     }  
                 };
-                objrequest.open("GET", "ajax_registration.jsp?rollno="+str+"",true);
+                objrequest.open("GET", "ajax_valid_Rollno.jsp?rollno="+str+"",true);
                 objrequest.send();   
             }
             
@@ -44,7 +44,7 @@
                         rdiv.innerHTML = objrequest.responseText;
                     }
                        
-                }
+                };
                     objrequest.open("GET","ajax_valid_Name.jsp?name="+str+"",true);
                     objrequest.send();    
             }
@@ -61,7 +61,7 @@
                         rdiv.innerHTML = objrequest.responseText;
                     }
                        
-                }
+                };
                     objrequest.open("GET","ajax_valid_Fname.jsp?fname="+str+"",true);
                     objrequest.send();    
             }
@@ -77,7 +77,7 @@
                         rdiv.innerHTML = objrequest.responseText;
                     }
                        
-                }
+                };
                     objrequest.open("GET","ajax_valid_Mname.jsp?mname="+str+"",true);
                     objrequest.send();    
             }
@@ -93,7 +93,7 @@
                         rdiv.innerHTML = objrequest.responseText;
                     }
                        
-                }
+                };
                     objrequest.open("GET","ajax_valid_Uid.jsp?uid="+str+"",true);
                     objrequest.send();    
             }
@@ -109,7 +109,7 @@
                         rdiv.innerHTML = objrequest.responseText;
                     }
                        
-                }
+                };
                     objrequest.open("GET","ajax_valid_Mobileno.jsp?mobileno="+str+"",true);
                     objrequest.send();    
             }
@@ -125,7 +125,7 @@
                         rdiv.innerHTML = objrequest.responseText;
                     }
                        
-                }
+                };
                     objrequest.open("GET","ajax_valid_PMobileno.jsp?pmobileno="+str+"",true);
                     objrequest.send();    
             }
@@ -141,7 +141,7 @@
                         rdiv.innerHTML = objrequest.responseText;
                     }
                        
-                }
+                };
                     objrequest.open("GET","ajax_valid_Email.jsp?email="+str+"",true);
                     objrequest.send();    
             }
@@ -150,7 +150,6 @@
     </head>
     
     <body>
-       
         
         <div class="container">
     <form action="signup.jsp" class="form-horizontal" method="post">
@@ -160,7 +159,7 @@
     <div class="form-group">
       <label for="name" class="col-lg-2 control-label">Name</label>
       <div class="col-lg-10">
-          <input type="text" name="tbname" class="form-control" id="name" onkeyup="checkName(this.value)" placeholder="Name">
+          <input type="text" name="tbname" class="form-control" id="name" onkeyup="checkName(this.value);" placeholder="Name">
            <br> <div  id="resultName"> </div>  
       </div>
     </div>
