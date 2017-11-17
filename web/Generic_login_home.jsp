@@ -19,6 +19,7 @@
     <body>
         
         <%@include file="ConnectPage.jsp" %>
+        <%@include file="HeaderPage.jsp" %>
     
          <%
         String error=""; 
@@ -76,20 +77,7 @@
 
         %>
         
-        
-        <div class="jumbotron">
-            <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/logo.jpg" height="100" width="130" alt="CCET Logo">
-                </div>
-                <p class="col-md-8" style="margin-top: 30px;">Chandigarh College of Engineering and Technology</p>
-
-            </div>
-            </div>
-        </div>
-        
-        
+    
         <div class="row"> 
             <div class="col-md-10"></div>
             <div class="col-md-2">
@@ -101,13 +89,13 @@
          <div class="form">
       
       <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Student Login</a></li>
-        <li class="tab"><a href="#login">Faculty Login</a></li>
+        <li class="tab active"><a href="#student_login">Student Login</a></li>
+        <li class="tab"><a href="#faculty_login">Faculty Login</a></li>
       </ul>
       
       <div class="tab-content">
           
-        <div id="signup"> 
+        <div id="student_login"> 
             
           <form method="post">
           
@@ -154,14 +142,14 @@
 
         </div>
         
-        <div id="login">   
+        <div id="faculty_login">   
             
           <form action="/" method="post">
           
           
-          <div class="form-group">
+          <div class="field-wrap">
             <label for="inputUsername" class="col-lg-2 control-label">Username</label>
-            <div class="col-lg-10">
+            <div class="col-lg-12">
             <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Faculty Username">
             </div>
           <div class="alert">
@@ -169,9 +157,9 @@
           </div>
           </div>
 
-          <div class="form-group">
+          <div class="field-wrap">
             <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
             </div>
             <div class="alert">
@@ -180,7 +168,6 @@
           </div>
           
           <div class="form-group">
-           
       
             <div class="alert">
                 <%=error%>
@@ -189,12 +176,14 @@
             <div class="row">  
             <p class="forgot"><a href="#">Forgot Password?</a></p>
             </div>
+            
             <div class="row">
                 <div class="col-md-12">
                     <button type="submit" class="button" name="btnLogin">Login</button>
             
                 </div>
             </div>
+            
           </div>
           
           </form>
@@ -204,7 +193,7 @@
             
          </div>
         
-           
+      
     <script  src="js/index.js"></script>
     </body>
 </html>
