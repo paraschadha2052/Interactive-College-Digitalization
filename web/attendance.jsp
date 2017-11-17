@@ -23,6 +23,7 @@
          <%
         if(username != null)
         {
+            float total, attended, per;
             
             String qry1 = "select * from attendance where roll_no='"+username+"'";
             int i=1;
@@ -37,19 +38,24 @@
                  
                  <div class="container-fluid">
                          <table class="table table-striped table-hover table-bordered">
-  <thead class="thead-dark">
+  <thead style="background-color: black">
     <tr>
       <th></th>
-      <th>SUBJECT</th>
-      <th>TOTAL LECTURES</th>
-      <th>LECTURES ATTENDED</th>
+      <th style="color: white">SUBJECT</th>
+      <th style="color: white">TOTAL LECTURES</th>
+      <th style="color: white">LECTURES ATTENDED</th>
+      <th style="color: white">PERCENTAGE</th>
     </tr>
   </thead>
   <tbody>
                  <%
                       while(rs1.next())
                          {
-                
+                             total=Integer.parseInt(rs1.getString(3));
+                             attended=Integer.parseInt(rs1.getString(4));
+                             per=attended * 100 / total;
+                             if(per >=75.0)
+                             {
                  %>
       
                                <tr>
@@ -57,8 +63,22 @@
                                      <td><%=rs1.getString(2)%></td>
                                      <td><%=rs1.getString(3)%></td>
                                      <td><%=rs1.getString(4)%></td>
+                                     <td> <%=per %> </td>
+                               </tr>
+                      <%
+                             }
+                             else
+                             {
+                      %>
+                                <tr class="danger">
+                                     <td> <%=i %> </td>
+                                     <td><%=rs1.getString(2)%></td>
+                                     <td><%=rs1.getString(3)%></td>
+                                     <td><%=rs1.getString(4)%></td>
+                                     <td> <%=per %> </td>
                                </tr>
                      <%
+                             }
                             i=i+1;
                           }
                      %>
