@@ -5,9 +5,10 @@
 --%>
 
         <%
-            String id=request.getParameter("i");
-       
-            int l=id.length();
+            String rollno = request.getParameter("rollno");
+            String pRollno = "/^[0-9a-zA-Z]+$/";
+            
+            int l=rollno.length();
             if(l>0)
             {
                %>
@@ -16,7 +17,7 @@
            if(l>0)
             {       
               
-                   String qry ="SELECT * FROM student WHERE roll_no='"+id+"'";
+                   String qry ="SELECT * FROM student WHERE roll_no='"+rollno+"'";
                    ResultSet rs=smt.executeQuery(qry);   
                    while(rs.next())
                    {
@@ -27,7 +28,7 @@
                                               
                    con.close();
                }
-            
+           
             }
         
        %>
