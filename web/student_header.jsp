@@ -20,12 +20,13 @@
         <div class="row container-fluid" style="background-color: black">
               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-                  <div class="collapse navbar-collapse" id="navbarColor02" style="font-family: 'Comic Sans MS' ; font-size: medium">
+                  <div class="collapse navbar-collapse" id="navbarColor02" style="font-size: medium">
     <ul class="nav navbar-nav" >
         <li><a href="student_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
           <li><a href="fee_upload.jsp" style="color: wheat">REGISTRATION</a></li>
          <li><a href="#" style="color: wheat">SUBJECTS</a></li>
-        <li><a href="# " style="color: wheat">MARKSHEET</a></li>
+         <li><a href="attendance.jsp" style="color: wheat">ATTENDANCE</a></li>
+        <li><a href="# " style="color: wheat">MARKSHEETS</a></li>
         <li><a href="edit_student_details.jsp" style="color: wheat">EDIT DETAILS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
