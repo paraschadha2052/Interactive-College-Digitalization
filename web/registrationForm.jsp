@@ -161,6 +161,7 @@
     
     <div class="form-group">
       <label for="name" class="col-lg-2 control-label">Name</label>
+      
       <div class="col-lg-10">
           <input type="text" name="tbname" class="form-control" id="name" onkeyup="checkName(this.value);" placeholder="Name">
            <br> <div  id="resultName"> </div>  
