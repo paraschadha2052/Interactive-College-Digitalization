@@ -15,8 +15,9 @@
         
     </head>
     <body>
-       
         
+        
+<%@include file="HeaderPage.jsp" %>
         <div class="row container-fluid" style="background-color: black">
               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
