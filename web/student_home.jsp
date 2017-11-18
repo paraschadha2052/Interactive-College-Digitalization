@@ -18,8 +18,7 @@
         <div class="container-fluid">
         <%@include file="student_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
-        <%@include file="SesssionCheck.jsp" %>  
-        <%@include file="HeaderPage.jsp" %>
+        <%@include file="SesssionCheck.jsp" %> 
      
          <%
         if(username != null)
