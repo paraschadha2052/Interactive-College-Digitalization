@@ -2824,7 +2824,7 @@ select[multiple].input-lg {
 .has-success.checkbox label,
 .has-success.radio-inline label,
 .has-success.checkbox-inline label {
-  color: #468847;
+  color: black ;
 }
 .has-success .form-control {
   border-color: #468847;
