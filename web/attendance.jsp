@@ -19,7 +19,7 @@
         <%@include file="SesssionCheck.jsp" %> 
         <%@include file="student_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
-        <%@include file="HeaderPage.jsp" %>
+       
          
      
          <%
