@@ -151,7 +151,10 @@
     
     <body>
         
+        <%@include file="HeaderPage.jsp" %>
         <div class="container">
+            
+        
     <form action="signup.jsp" class="form-horizontal" method="post">
   <fieldset>
     <legend>Registration Form</legend>
