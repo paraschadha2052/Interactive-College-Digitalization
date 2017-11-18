@@ -9,6 +9,7 @@
 <%@page import="javax.mail.*"%>
 <%@page import="javax.mail.internet.*"%>
 
+<%@include file="HeaderPage.jsp" %>
 <%@include file="ConnectPage.jsp" %>
 
 <%
