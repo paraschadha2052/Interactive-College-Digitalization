@@ -16,7 +16,6 @@
     <body>
        <%@include file="student_header.jsp" %>
       <%@include file="ConnectPage.jsp" %>
-      <%@include file="HeaderPage.jsp" %>
         <%
          String i, j;
          i="CO14327";
