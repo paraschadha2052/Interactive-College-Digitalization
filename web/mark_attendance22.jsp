@@ -27,12 +27,9 @@
             String qry = "select s.roll_no, s.name, a.tot_lec, a.lec_att from student s, attendance a  where s.roll_no=a.roll_no and s.branch='"+b+"' and s.semester="+s+" and a.sub_code='"+sub_cod+"' order by s.roll_no asc";
            
 %>   
-        
-  
-         
-       
+              
             <div class="container-fluid">
-                <form method="post" action="attendance_back.jsp?i=<%=sub_cod%>&j=<%=b%>&k=<%=s%>">
+                <form method="post" >
             <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">
     <tr>
@@ -82,13 +79,11 @@
     </table> 
          
         
-       
-        
          
          <div class="form-group">
              <div class="col-lg-10 col-lg-offset-2" style="margin-top: 10px">
         <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" name="submit" class="btn btn-primary">Save</button>
       </div>
     </div>
          
@@ -96,6 +91,44 @@
          </form>      
          
          
+                 <%
+           if(request.getParameter("submit")!=null) 
+           {
+               out.println("\n In if");
+             
+            Statement smtt=null;
+            smtt=con.createStatement();
+             ResultSet rs1 = smt.executeQuery(qry);
+             int count=0;
+              while(rs1.next())
+              {
+                String x=rs1.getString(1);
+                int a=Integer.parseInt(request.getParameter(x));
+                int t=y + Integer.parseInt(rs1.getString(3));
+                int l=a + Integer.parseInt(rs1.getString(4));
+                
+         
+            
+                   String qry2 ="update attendance set tot_lec="+t+",lec_att="+l+" where roll_no='"+x+"' and sub_code='"+sub_cod+"'";
+                   int r=smtt.executeUpdate(qry2);
+                   if(r>0)
+                   {
+                       count=count+1;
+                   }
+                   
+                            
+            }
+            
+            
+               
+                 %>
+                 
+      <p style="color: blue; font-size: medium; alignment-adjust: central"> <%= count %> RECORDS HAVE BEEN UPDATED </p>
+           <%  
+           }
+            %>
+        
+       
            
          </div>        
     </div>
