@@ -19,65 +19,7 @@
        
         <div class="container-fluid">
             
-        <%@include file="student_header.jsp" %>
-        <%@include file="SesssionCheck.jsp" %> 
         
-          <%
-          
-        if(request.getParameter("btnSubmit")==null) 
-        {
-            %>
-        <div class="container">
-    <form  class="form-horizontal" method="post">
-  <fieldset>
-    <legend>Select the class:</legend>
-    
-     
-      <div class="form-group">
-      <label for="semesterSelect" class="col-lg-2 control-label">Semester</label>
-      <div class="col-lg-10">
-          <select name="semesterSelect" class="form-control" id="semesterSelect">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-          <option>7</option>
-          <option>8</option>
-        </select>
-      </div>
-    </div>
-      
-    
-    <div class="form-group">
-      <label for="branchSelect" class="col-lg-2 control-label">Branch</label>
-      <div class="col-lg-10">
-          <select name="branchSelect" class="form-control" id="branchSelect">
-          <option>CSE</option>
-          <option>ECE</option>
-          <option>ME</option>
-          <option>CE</option>
-         
-        </select>
-      </div>
-    </div>
-    
-    
-    
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-          <button type="reset" name="btnCancel" class="btn btn-default">Cancel</button>
-          <button type="submit" name="btnSubmit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </fieldset>
-</form>
-        
-        <%
-          }
-        %>
-         
         
         <%@include file="ConnectPage.jsp" %>
         
@@ -93,20 +35,16 @@
       <th></th>
       <th style="color: white">SUBJECT_CODE</th>
       <th style="color: white">SUBJECT_NAME</th>
-      <th style="color: white">CREDITS</th>
+      <th style="color: white">BRANCH</th>
+      <th style="color: white">SEMESTER</th>
     </tr>
   </thead>
   <tbody>
       <%
-             String sem, branch;
-             
-              sem=request.getParameter("semesterSelect");
-              branch=request.getParameter("branchSelect"); 
-              
-              
+             String fid="f005"; 
              int i=1;
              
-            String qry = "select * from subject where semester='"+sem+"' and branch='"+branch+"'";
+            String qry = "select * from subject where F_id='"+fid+"'";
             ResultSet rs = smt.executeQuery(qry);
             while(rs.next())
             {
@@ -116,7 +54,8 @@
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>
-                                     <td><%=rs.getString(3)%></td>
+                                     <td><%=rs.getString(4)%></td>
+                                     <td><%=rs.getString(5)%></td>
                                     
                                </tr>
         
@@ -131,8 +70,7 @@
     </table> 
          </div>        
     </div>
-        </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+           <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>    
