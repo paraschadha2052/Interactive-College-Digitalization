@@ -40,7 +40,7 @@
             while(rs.next())
             {
           %>
-  <a herf="mark_attendance11.jsp?i=<%=rs.getString(5)%>&j=<%=rs.getString(4)%>">
+  <a href="mark_attendance11.jsp?i=<%=rs.getString(5)%>&j=<%=rs.getString(4)%>">
                                <tr>
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
