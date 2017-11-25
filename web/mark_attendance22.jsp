@@ -1,6 +1,6 @@
 <%-- 
-    Document   : mark_attendance11
-    Created on : Nov 25, 2017, 3:35:26 PM
+    Document   : mark attendance22
+    Created on : Nov 25, 2017, 8:22:30 PM
     Author     : DV
 --%>
 
@@ -15,21 +15,24 @@
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
-    <body>
-          
-        <div class="container-fluid">
+    <body> <div class="container-fluid">
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
         <%
             String b=request.getParameter("j");
-                String sub_cod=request.getParameter("x");
-               int s=Integer.parseInt(request.getParameter("k"));
+            String sub_cod=request.getParameter("i");
+            int s=Integer.parseInt(request.getParameter("k"));
+            int y=Integer.parseInt(request.getParameter("tbNewAtt"));
+            int i=1;
+            String qry = "select s.roll_no, s.name, a.tot_lec, a.lec_att from student s, attendance a  where s.roll_no=a.roll_no and s.branch='"+b+"' and s.semester="+s+" and a.sub_code='"+sub_cod+"' order by s.roll_no asc";
+           
 %>   
         
   
-        
+         
+       
             <div class="container-fluid">
-                <form action="mark_attendance22.jsp?i=<%=sub_cod%>&j=<%=b%>&k=<%=s%>" method="post">
+                <form method="post" action="attendance_back.jsp?i=<%=sub_cod%>&j=<%=b%>&k=<%=s%>">
             <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">
     <tr>
@@ -37,30 +40,32 @@
       
       <th style="color: white">Student ID</th>
       <th style="color: white">Name</th>
-      <th style="color: white">Total Lecture Till Last Amended</th>
+      <th style="color: white">Total Lectures Till Date</th>
       <th style="color: white">Lecture Attended</th>
-      <th style="color: white">Lecture Attended After Last Amended</th>
     </tr>
   </thead>
   <tbody>
       <%
            
                
-             int i=1;
+            
              
-            String qry = "select s.roll_no, s.name, a.tot_lec, a.lec_att from student s, attendance a  where s.roll_no=a.roll_no and s.branch='"+b+"' and s.semester="+s+" and a.sub_code='"+sub_cod+"' order by s.roll_no asc";
-            ResultSet rs = smt.executeQuery(qry);
+             ResultSet rs = smt.executeQuery(qry);
             while(rs.next())
             {
+                String x=rs.getString(1);
+                int a=Integer.parseInt(request.getParameter(x));
+                int t=y + Integer.parseInt(rs.getString(3));
+                int l=a + Integer.parseInt(rs.getString(4));
+                
           %>
 
                                <tr>
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
-                                     <td><%=rs.getString(2)%></td>
-                                     <td><%=rs.getString(3)%></td>
-                                     <td><%=rs.getString(4)%></td>
-                                     <td><input type="text" name="<%=rs.getString(1)%>"></td>
+                                     <td><%=rs.getString(2) %></td>
+                                     <td><%=t%></td>
+                                     <td><%=l%></td>
                                </tr>
                               
   
@@ -76,31 +81,22 @@
          </tbody>
     </table> 
          
-         <div class="form-group">
-      <label for="newAtt" class="col-lg-2 control-label">New Total Attendance</label>
-      <div class="col-lg-10">
-          <input type="text" name="tbNewAtt" class="form-control" id="batch">
-      </div>
-    </div>
-         
-         
+        
+       
         
          
          <div class="form-group">
              <div class="col-lg-10 col-lg-offset-2" style="margin-top: 10px">
         <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Save</button>
       </div>
     </div>
          
          
-         </form>         
+         </form>      
          
-         <%
-            
-            
-            %>
-              
+         
+           
          </div>        
     </div>
            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -109,6 +105,5 @@
     <script src="js/bootstrap.min.js"></script>    
         
         
-    
     </body>
 </html>
