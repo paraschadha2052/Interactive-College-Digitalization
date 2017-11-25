@@ -40,8 +40,8 @@
             while(rs.next())
             {
           %>
-  <a href="mark_attendance11.jsp?i=<%=rs.getString(5)%>&j=<%=rs.getString(4)%>">
-                               <tr>
+  
+      <tr onclick="location.href='mark_attendance11.jsp?i=<%=rs.getString(5)%>&j=<%=rs.getString(4)%>'">
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>
@@ -49,7 +49,7 @@
                                      <td><%=rs.getString(5)%></td>
                                     
                                </tr>
-  </a>
+    
         
             <% 
             i=i+1;
