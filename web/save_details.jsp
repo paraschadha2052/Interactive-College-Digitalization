@@ -37,7 +37,13 @@
     int r=smt.executeUpdate(qry);
         if(r>0)
         {
+            %>
+            <%@include file="student_header.jsp" %>
+            <%
             out.println("<p>Record has been updated</p>");
+            %>
+           
+            <%
         }
 
         else
