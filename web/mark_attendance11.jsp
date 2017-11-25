@@ -1,6 +1,6 @@
 <%-- 
-    Document   : mark_attendance
-    Created on : Nov 25, 2017, 12:52:47 PM
+    Document   : mark_attendance11
+    Created on : Nov 25, 2017, 3:35:26 PM
     Author     : DV
 --%>
 
@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-      
+        
         <div class="container-fluid">
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
@@ -20,36 +20,33 @@
         
         
             <div class="container-fluid">
-                         <table class="table table-striped table-hover table-bordered">
+            <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">
     <tr>
       <th></th>
-      <th style="color: white">SUBJECT_CODE</th>
-      <th style="color: white">SUBJECT_NAME</th>
-      <th style="color: white">BRANCH</th>
-      <th style="color: white">SEMESTER</th>
+      <th style="color: white">Semester</th>
+      <th style="color: white">Student ID</th>
     </tr>
   </thead>
   <tbody>
       <%
-             String fid="f005"; 
+               String b=request.getParameter("j");
+               int s=Integer.parseInt(request.getParameter("i"));
              int i=1;
              
-            String qry = "select * from subject where F_id='"+fid+"'";
+            String qry = "select * from student where branch='"+b+"'";
             ResultSet rs = smt.executeQuery(qry);
             while(rs.next())
             {
           %>
-  <a herf="mark_attendance11.jsp?i=<%=rs.getString(5)%>&j=<%=rs.getString(4)%>">
+
                                <tr>
                                      <td> <%=i %> </td>
-                                     <td><%=rs.getString(1)%></td>
-                                     <td><%=rs.getString(2)%></td>
-                                     <td><%=rs.getString(4)%></td>
-                                     <td><%=rs.getString(5)%></td>
+                                     <td> <%=s %> </td>
+                                     <td><%=rs.getString(9)%></td>
                                     
                                </tr>
-  </a>
+  
         
             <% 
             i=i+1;
