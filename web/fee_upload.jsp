@@ -58,7 +58,7 @@
         
         
         <div class="container">
-    <form class="form-horizontal" method="post">
+    <form class="form-horizontal" action="uploadpic" enctype="multipart/form-data" method="post">
   <fieldset>
     <legend>Edit Details</legend>
     

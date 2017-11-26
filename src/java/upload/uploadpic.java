@@ -30,46 +30,52 @@ public class uploadpic extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             try{
-            MultipartRequest req = new MultipartRequest(request, "C:\\Users\\DV\\Documents\\NetBeansProjects\\salon\\web\\images\\");
+            MultipartRequest req = new MultipartRequest(request, "C:\\Users\\Monkey\\Documents\\NetBeansProjects\\Interactive-College-Digitalization2\\web\\fileupload");
+               
+            final long MAX_RESUME_SIZE = 5242880; // 5MB -> 5 * 1024 * 1024
            
             
-               
-               String id ,name,desc,fname;
+               String rollno ,sem, bti,fname;
                int price;
-               id=req.getParameter("tbId");
-               name=req.getParameter("tbName");
-               desc=req.getParameter("tbDesc");
-               fname=req.getFilesystemName("photo");
-               price=Integer.parseInt((req.getParameter("tbPrice")));
+               rollno=req.getParameter("tbRollNo");
+               sem=req.getParameter("semesterSelect");
+               bti=req.getParameter("tbBTI");
+               fname=req.getFilesystemName("pdf");
                Connection con=null;
                Statement smt;
-                         
+               
                 try
                {       
                    Class.forName("com.mysql.jdbc.Driver");
-                   con=DriverManager.getConnection("jdbc:mysql://localhost:3306/salon","root","");
+                   con=DriverManager.getConnection("jdbc:mysql://localhost:3306/college_erp","root","");
                    
-                   smt=con.createStatement();
-                   String qry ="insert into deals values('"+id+"','"+name+"','"+desc+"',"+price+",'"+fname+"')" ;
+                   
+                       smt=con.createStatement();
+                   String qry ="insert into fee_recipt values('"+rollno+"','"+fname+"','"+bti+"','"+sem+"')" ;
              
  
                 int r = smt.executeUpdate(qry);
                 if (r > 0) 
                 {
-                  response.sendRedirect("products_admin.jsp");
+                   out.println("<h3>\nYour Fee Receipt has been Uploaded Succesfully. \n\nThank you.</h3>\n\n <h2>Redirecting to Home...<h2>");
+                   response.setHeader("Refresh", "4;url=faculty_home.jsp");
                 }                  
                    else
                    {
-                             response.sendRedirect("add_products.jsp"); 
+                        out.println("<h3>\nAn error occurred while uploading Fee Receipt. \n\nPlease try agian.</h3>\n\n <h2>Redirecting...<h2>");
+                   response.setHeader("Refresh", "4;url=fee_recipt.jsp");
                    }
                  con.close();
-               }  
+              
+               }
                catch(Exception ex)
                        {
-                           out.println("ERROR :<BR><p>"+ex+"</p>");  
-                           response.sendRedirect("add_products.jsp");
-                       }
-            }finally
+                           out.println("<h3>\nAn error occurred while uploading Fee Receipt. \n\nPlease try agian after some time.</h3>\n\n <h2>Redirecting...<h2>");
+                   response.setHeader("Refresh", "4;url=fee_recipt.jsp");
+                       } 
+    
+            }
+            finally
                 {
                     out.close();
                 }
