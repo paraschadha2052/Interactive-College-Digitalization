@@ -1,6 +1,6 @@
 <%-- 
-    Document   : faculty_home
-    Created on : Nov 25, 2017, 12:45:38 PM
+    Document   : admin_home
+    Created on : Dec 14, 2017, 10:29:45 PM
     Author     : DV
 --%>
 
@@ -15,7 +15,7 @@
     
     <body  style="background-image: url(images/CCET1.png); background-repeat: no-repeat;  ">
         <div class="container-fluid">
-        <%@include file="faculty_header.jsp" %>
+            <%@include file="admin header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
      
         
