@@ -1,6 +1,6 @@
 <%-- 
-    Document   : view_attendance
-    Created on : Dec 14, 2017, 10:33:20 PM
+    Document   : view_students
+    Created on : Dec 15, 2017, 8:02:03 AM
     Author     : DV
 --%>
 
@@ -20,9 +20,9 @@
         
         <div class="container">
             
-    <form class="form-horizontal" action="view_attendance11.jsp" method="post">
+    <form class="form-horizontal" action="view_students.jsp" method="post">
   <fieldset>
-    <legend>CHOOSE CLASS TO VIEW ATTENDANCE</legend>
+    <legend>CHOOSE CLASS TO VIEW STUDENT DETAILS</legend>
     
       <div class="form-group">
       <label for="semesterSelect" class="col-lg-2 control-label">Semester</label>
