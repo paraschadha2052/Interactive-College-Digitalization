@@ -16,15 +16,17 @@
     <body>
        <%@include file="student_header.jsp" %>
       <%@include file="ConnectPage.jsp" %>
-        <%
-         String i, j;
-         i="CO14327";
-         j="14-CET-87";
-                 
-                   String qry ="select * from student where roll_no='"+i+"'";
-                   ResultSet rs=smt.executeQuery(qry);    //resulset is set of records
-                   rs.next();
-                   %>      
+      <%@include file="SesssionCheck.jsp" %> 
+      
+      <%
+        if(username != null)
+        {
+            String qry = "select * from student where roll_no='"+username+"'";
+            ResultSet rs = smt.executeQuery(qry);
+            if(rs.next())
+            {
+                
+                 %>    
         
         
         <div class="container">
@@ -210,6 +212,8 @@
     </div>
   </fieldset>
 </form>
+             
+             <% } } %>
             
    
         
