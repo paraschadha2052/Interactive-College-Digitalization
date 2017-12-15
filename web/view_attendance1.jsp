@@ -25,9 +25,6 @@
       
       <th style="color: white">Student ID</th>
       <th style="color: white">Name</th>
-      <th style="color: white">Total Lecture Till Last Amended</th>
-      <th style="color: white">Lecture Attended</th>
-      <th style="color: white">Lecture Attended After Last Amended</th>
     
          <%
              String branch=request.getParameter("branchSelect");
@@ -65,7 +62,7 @@
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>
-                                     <%  while(rs2.next()) { %>
+                                     <% while(rs2.next()) { %>
                                      <td><%=rs2.getString(1)%></td>
                                      <td><%=rs2.getString(2)%></td>
                                      <% } %>
