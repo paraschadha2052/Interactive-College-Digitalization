@@ -87,7 +87,7 @@
     <div class="form-group">
       <label for="add_present" class="col-lg-2 control-label">Present Address</label>
       <div class="col-lg-10">
-          <input type="text" name="txtAddPresent" class="form-control" rows="3" id="add_present" value="<%= rs.getString(6)%>" >
+          <input type="text" name="txtAddPresent" class="form-control"  id="add_present" value="<%= rs.getString(6)%>" >
     
       </div>
     </div>
@@ -95,7 +95,7 @@
     <div class="form-group">
       <label for="add_permanent" class="col-lg-2 control-label">Permanent Address</label>
       <div class="col-lg-10">
-          <input type="text" name="txtAddPermanent" class="form-control" rows="3" id="add_permanent" value="<%= rs.getString(7)%>" >
+          <input type="text" name="txtAddPermanent" class="form-control"  id="add_permanent" value="<%= rs.getString(7)%>" >
       </div>
     </div>
     
