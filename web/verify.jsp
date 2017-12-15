@@ -21,6 +21,7 @@
     String error = "";
     
     if(request.getParameter("btnSet")!=null){
+        
         String username = session.getAttribute("username").toString();
         String password, confirmPassword;
         password = request.getParameter("inputPassword");
@@ -30,7 +31,20 @@
             String qry = "update login set password = '"+password+"' where username='"+username+"'";
             if(smt.executeUpdate(qry)>0){
                 out.println("Password Set successfully!<br /> Redirecting to homepage!");
-                response.setHeader("Refresh", "1;url=student_home.jsp");
+                
+                String qryy="select * from login where username='"+username+"'";
+                ResultSet rs=smt.executeQuery(qryy);
+                if(rs.next()){
+                    if(rs.getString(3).equals("student"))
+                    {
+                            response.setHeader("Refresh", "2;url=faculty_home.jsp");
+                    }
+                    else
+                    {
+                    response.setHeader("Refresh", "2;url=student_home.jsp");
+                    }
+        
+        }
             }
         }
         else{
@@ -54,7 +68,7 @@
             }
             else{
                 // already verified...
-                response.sendRedirect("login_page.jsp");
+                response.sendRedirect("Generic_login_page.jsp");
             }
         }
     }
