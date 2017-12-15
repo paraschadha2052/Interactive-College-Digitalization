@@ -25,27 +25,11 @@
         String error=""; 
         String error1="";
         String error2="";
-        if(request.getParameter("btnLogin")!=null)
+        if(request.getParameter("btnLoginStudent")!=null)
         {
         String username,pass;
         username=request.getParameter("inputUsername");
         pass=request.getParameter("inputPassword");
-           
-        if((username==null || username=="")&&(pass==null || pass==""))
-        {
-            error="Invalid Email id and Password";
-        }
-        else if(username==null || username=="")
-        {
-                error1="Invalid Email id";
-                
-        }
-        else if(pass==null || pass=="")
-        {
-                error2="Invalid password";
-        }
-        else
-        {
         
         try
         {
@@ -72,6 +56,41 @@
         {
         out.println(ex);
         }
+        }
+
+        %>
+        
+        <%
+        if(request.getParameter("btnLoginFaculty")!=null)
+        {
+        String username,pass;
+        username=request.getParameter("inputUsername");
+        pass=request.getParameter("inputPassword");
+        
+        try
+        {
+        String qry="select * from login where username='"+username+"' and password='"+pass+"'";
+        ResultSet rs=smt.executeQuery(qry);
+        if(rs.next())
+        {
+            String verified = rs.getString(4);
+            System.out.println("Verified: "+verified);
+            if(verified.equals("yes")){
+                session.setAttribute("username", username);
+                response.sendRedirect("faculty_home.jsp");
+            }
+            else{
+                error="Account not verified. Please check your Email.";
+            }
+        }
+        else
+        {
+            error="Incorrect username or password. Try again.";
+        }
+        }
+        catch(Exception ex)
+        {
+        out.println(ex);
         }
         }
 
@@ -102,7 +121,7 @@
           <div class="field-wrap">
             <label for="inputUsername" class="col-lg-2 control-label">Username</label>
             <div class="col-lg-12">
-            <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Student Username">
+            <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Student Username" required>
             </div>
           <div class="alert">
             <%=error1%>
@@ -112,7 +131,7 @@
           <div class="field-wrap">
             <label for="inputPassword" class="col-lg-2 control-label">Password</label>
             <div class="col-lg-12">
-                <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" required>
             </div>
             <div class="alert">
                 <%=error2%>
@@ -131,7 +150,7 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="button" name="btnLogin">Login</button>
+                    <button type="submit" class="button" name="btnLoginStudent">Login</button>
             
                 </div>
             </div>
@@ -150,7 +169,7 @@
           <div class="field-wrap">
             <label for="inputUsername" class="col-lg-2 control-label">Username</label>
             <div class="col-lg-12">
-            <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Faculty Username">
+            <input type="text" class="form-control" id="inputUsername" name="inputUsername" placeholder="Faculty Username" required>
             </div>
           <div class="alert">
             <%=error1%>
@@ -160,7 +179,7 @@
           <div class="field-wrap">
             <label for="inputPassword" class="col-lg-2 control-label">Password</label>
             <div class="col-lg-12">
-                <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" required>
             </div>
             <div class="alert">
                 <%=error2%>
@@ -179,7 +198,7 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="button" name="btnLogin">Login</button>
+                    <button type="submit" class="button" name="btnLoginFaculty">Login</button>
             
                 </div>
             </div>
