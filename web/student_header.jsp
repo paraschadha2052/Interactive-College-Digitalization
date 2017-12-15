@@ -10,9 +10,15 @@
     <head>
        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
-        
+        <style>
+            li:hover{
+                background-color: black;
+                color: red;
+            }
+        </style>
     </head>
     <body>
         
@@ -22,8 +28,8 @@
               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
                   <div class="collapse navbar-collapse" id="navbarColor02" style="font-size: medium">
-    <ul class="nav navbar-nav" >
-        <li><a href="student_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+                      <ul class=" nav navbar-nav"  >
+                          <li ><a href="student_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
           <li><a href="fee_upload.jsp" style="color: wheat">REGISTRATION</a></li>
          <li><a href="student_subject.jsp" style="color: wheat">SUBJECTS</a></li>
          <li><a href="attendance.jsp" style="color: wheat">ATTENDANCE</a></li>
