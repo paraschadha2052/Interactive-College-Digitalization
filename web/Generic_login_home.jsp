@@ -33,7 +33,7 @@
         
         try
         {
-        String qry="select * from login where username='"+username+"' and password='"+pass+"'";
+        String qry="select * from login where username='"+username+"' and password='"+pass+"' and type='student'";
         ResultSet rs=smt.executeQuery(qry);
         if(rs.next())
         {
@@ -69,7 +69,7 @@
         
         try
         {
-        String qry="select * from login where username='"+username+"' and password='"+pass+"'";
+        String qry="select * from login where username='"+username+"' and password='"+pass+"' and type='faculty'";
         ResultSet rs=smt.executeQuery(qry);
         if(rs.next())
         {
@@ -100,7 +100,7 @@
         <div class="row"> 
             <div class="col-md-10"></div>
             <div class="col-md-2">
-                <p class="admin"><a href="#" style="color: white">Admin Login</a></p>
+                <p class="admin"><a href="admin_login.jsp" style="color: white">Admin Login</a></p>
             </div>
         </div>
         

@@ -147,3 +147,19 @@ a:link
     text-align: center;
 }
 
+.admin_login_head {
+    
+  margin: 0 0 20px 0;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: #E65D5D;
+  color: #ffffff;
+  border-radius: 2px;
+  font-size: 20px;
+  //float: left;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
