@@ -20,7 +20,7 @@
         
         <div class="container">
             
-    <form class="form-horizontal" action="view_attendance1.jsp" method="post">
+    <form class="form-horizontal" action="view_attendance11.jsp" method="post">
   <fieldset>
     <legend>CHOOSE CLASS TO VIEW ATTENDANCE</legend>
     
