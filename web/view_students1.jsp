@@ -18,6 +18,7 @@
     <body>
          <%@include file="admin header.jsp" %>
          <%@include file="ConnectPage.jsp" %>
+         <div class="container-fluid">
          
                   <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">
@@ -43,7 +44,7 @@
              
             
             
-            String qry = "select * from student  where branch='"+branch+"' semester="+sem+" order by roll_no asc";
+            String qry = "select * from student  where branch='"+branch+"'and semester="+sem+" order by roll_no asc";
             ResultSet rs = smt.executeQuery(qry);
             while(rs.next())
             {
@@ -64,8 +65,10 @@
             i=i+1;
             }              
                  %>
+                
                  
     </tbody>
     </table> 
+                  </div>
     </body>
 </html>
