@@ -131,9 +131,9 @@
                 %>
                 </tbody>
             </table>
-            <div class="alert">
+            <h3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central">
                 <%=msg%>
-            </div>
+            </h3>
             <input type="hidden" name="br" value="<%=br%>">
             <input type="hidden" name="sub" value="<%=sub_cod%>">
             <input type="hidden" name="sem" value="<%=sem%>">
