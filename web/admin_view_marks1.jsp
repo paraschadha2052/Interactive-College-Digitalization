@@ -54,7 +54,7 @@
              
             Statement smtt=null;
               smtt=con.createStatement();
-             String qry2 = "select roll_no, name from student where branch='"+branch+"' and batch='"+batch+"'  order by roll_no ";
+             String qry2 = "select roll_no, name from student where branch='"+branch+"' and batch='"+batch+"'  and semester='"+sem+"'  order by roll_no ";
             ResultSet rs2 = smt.executeQuery(qry2);          
           while(rs2.next())
             {
