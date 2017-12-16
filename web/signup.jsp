@@ -16,7 +16,7 @@
     out.println("HI");
 
     String name,sex,dob,f_name, m_name,add_present, add_permanent, reg_no, roll_no, branch, uid,email, category, batch, mobile ,parent_mobile;
-    int hostler;
+    int hostler,sem;
 
     name=request.getParameter("tbname");
     sex=request.getParameter("sexRadio");
@@ -35,6 +35,7 @@
     category=request.getParameter("categorySelect");
     hostler=Integer.parseInt(request.getParameter("hostlerRadio"));
     batch=request.getParameter("tbBatch");
+    sem=1;
     
     out.println(name + " " + email + "\n");
 
@@ -42,7 +43,7 @@
     {    
         System.out.println("Trying to send mail ...");
         String username = roll_no;
-        String baseUrl = "http://localhost:22186/Interactive-College-Digitalization/verify.jsp";
+        String baseUrl = "http://localhost:8080/Interactive-College-Digitalization2/verify.jsp";
         String uuid = UUID.randomUUID().toString().replace("-", "");
         out.println("Verfification hash: "+uuid);
 
@@ -88,7 +89,7 @@
         // insert into db....
         smt=con.createStatement();
         // TODO: Encrypt passwords using MD5 hash...
-        String qry ="insert into student values('"+name+"','"+sex+"','"+dob+"','"+f_name+"', '"+m_name+"','"+add_present+"', '"+add_permanent+"', '"+reg_no+"', '"+roll_no+"','"+ branch+"', '"+uid+"','"+mobile+"','"+parent_mobile+"','"+email+"', '"+category+"',"+hostler+" ,'"+batch+"')" ;
+        String qry ="insert into student values('"+name+"','"+sex+"','"+dob+"','"+f_name+"', '"+m_name+"','"+add_present+"', '"+add_permanent+"', '"+reg_no+"', '"+roll_no+"','"+ branch+"', '"+uid+"','"+mobile+"','"+parent_mobile+"','"+email+"', '"+category+"',"+hostler+" ,'"+batch+"',"+sem+")" ;
         int r=smt.executeUpdate(qry);
         if(r>0)
         {
