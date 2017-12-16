@@ -18,7 +18,6 @@
     
     if(request.getParameter("btnSet")!=null){
         
-        String usernamee = session.getAttribute("username").toString();
         String username=request.getParameter("username");
         out.println(username);
         String password, confirmPassword;
@@ -28,22 +27,7 @@
             smt = con.createStatement();
             String qry = "update login set password = '"+password+"' where username='"+username+"'";
             if(smt.executeUpdate(qry)>0){
-                out.println("<h3>Password Set successfully!<br /> Redirecting to homepage!<h3>");
-                
-                String qryy="select * from login where username='"+username+"'";
-                ResultSet rs=smt.executeQuery(qryy);
-                if(rs.next()){
-                    if(rs.getString(3).equals("student"))
-                    {
-                            response.setHeader("Refresh", "3;url=faculty_home.jsp");
-                    }
-                    else
-                    {
-                    response.setHeader("Refresh", "3;url=student_home.jsp");
-                    }
-                    
-        
-        }
+                response.sendRedirect("pass_redirect.jsp?un="+username);              
             }
         }
         else{
