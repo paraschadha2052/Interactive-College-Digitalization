@@ -95,10 +95,11 @@
         }
 
         %>
-        
-    
         <div class="row"> 
-            <div class="col-md-10"></div>
+            <div class="col-md-2"><p class="admin"><a href="registrationForm.jsp" style="color: white">Student Registration</a></p>
+          </div>
+            <div class="col-md-8">   </div>
+        
             <div class="col-md-2">
                 <p class="admin"><a href="admin_login.jsp" style="color: white">Admin Login</a></p>
             </div>
