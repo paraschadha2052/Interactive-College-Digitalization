@@ -66,5 +66,13 @@
     </tbody>
     </table> 
                   </div>
+                 
+                 <div class="row"> 
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <p class="admin"><a href="admin_add_faculty.jsp" style="color: white">Add New Faculty</a></p>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
     </body>
 </html>
