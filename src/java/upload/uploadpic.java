@@ -58,7 +58,7 @@ public class uploadpic extends HttpServlet {
                 if (r > 0) 
                 {
                    out.println("<h3>\nYour Fee Receipt has been Uploaded Succesfully. \n\nThank you.</h3>\n\n <h2>Redirecting to Home...<h2>");
-                   response.setHeader("Refresh", "4;url=faculty_home.jsp");
+                   response.setHeader("Refresh", "4;url=student_home.jsp");
                 }                  
                    else
                    {
