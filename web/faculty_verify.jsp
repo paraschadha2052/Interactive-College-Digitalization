@@ -35,7 +35,8 @@
     add=request.getParameter("txtAdd");
     
     
-        String qry0 ="update faculty set department = '"+department+"' and mobile = '"+mobile+"' and UID = '"+uid+"' and address = '"+add+"' where f_id='"+f_id+"'" ;
+        String qry0 ="update faculty set department = '"+department+"', mobile = '"+mobile+"', UID = '"+uid+"', address = '"+add+"' where f_id='"+f_id+"'" ;
+        System.out.println(qry0);
         int r=smt.executeUpdate(qry0);
         if(r>0)
         {
@@ -81,7 +82,7 @@
             }
             else{
                 // already verified...
-                response.sendRedirect("Generic_login_page.jsp");
+                response.sendRedirect("Generic_login_home.jsp");
             }
         }
     }
