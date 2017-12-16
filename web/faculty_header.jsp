@@ -25,7 +25,7 @@
     <ul class="nav navbar-nav" >
         <li><a href="faculty_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
          <li><a href="mark_attendance.jsp" style="color: wheat">MARK ATTENDANCE</a></li>
-        <li><a href="# " style="color: wheat">PREPARE MARKSHEETS</a></li>
+        <li><a href="# " style="color: wheat">UPLOAD NOTICE</a></li>
         <li><a href="edit_faculty_details.jsp" style="color: wheat">EDIT DETAILS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

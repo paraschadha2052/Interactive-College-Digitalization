@@ -33,7 +33,6 @@
           <li><a href="fee_upload.jsp" style="color: wheat">REGISTRATION</a></li>
          <li><a href="student_subject.jsp" style="color: wheat">SUBJECTS</a></li>
          <li><a href="attendance.jsp" style="color: wheat">ATTENDANCE</a></li>
-        <li><a href="# " style="color: wheat">MARKSHEETS</a></li>
         <li><a href="edit_student_details.jsp" style="color: wheat">EDIT DETAILS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
