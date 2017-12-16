@@ -46,9 +46,8 @@
                        <%
                 }
         }
-         String i, j;
-         i="CO14327";
-         j="14-CET-87";
+         String i;
+         i=(String)session.getAttribute("username");
                  
                    String qry ="select * from student where roll_no='"+i+"'";
                    smt = con.createStatement(); 

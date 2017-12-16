@@ -163,7 +163,7 @@
         
         <div id="faculty_login">   
             
-          <form action="/" method="post">
+          <form method="post">
           
           
           <div class="field-wrap">
