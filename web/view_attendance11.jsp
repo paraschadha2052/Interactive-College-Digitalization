@@ -41,7 +41,7 @@
              
             
             
-            String qry = "select s.roll_no, s.name, su.sub_name,  a.tot_lec, a.lec_att from attendance a, student s, subject su where s.branch='"+branch+"' and su.sub_code=a.sub_code and s.semester="+sem+" order by s.roll_no asc";
+            String qry = "select s.roll_no, s.name, su.sub_name,  a.tot_lec, a.lec_att from attendance a, student s, subject su where s.roll_no=a.roll_no and s.branch='"+branch+"' and su.sub_code=a.sub_code and s.semester="+sem+" order by s.roll_no asc";
             ResultSet rs = smt.executeQuery(qry);
             while(rs.next())
             {
