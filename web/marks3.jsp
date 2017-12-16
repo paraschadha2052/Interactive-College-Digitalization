@@ -21,6 +21,8 @@
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
         
+        <%@include file="SesssionCheck.jsp" %> 
+        
          <%
               
             String b=request.getParameter("j");

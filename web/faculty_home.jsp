@@ -17,6 +17,8 @@
         <div class="container-fluid">
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
+        
+        <%@include file="SesssionCheck.jsp" %> 
      
         
         </div>
