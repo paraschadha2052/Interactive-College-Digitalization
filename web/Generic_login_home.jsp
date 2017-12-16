@@ -145,7 +145,7 @@
             </div>
             
             <div class="row">  
-            <p class="forgot"><a href="#">Forgot Password?</a></p>
+            <p class="forgot"><a href="forgot_password.jsp">Forgot Password?</a></p>
             </div>
             
             <div class="row">
@@ -193,7 +193,7 @@
             </div>
             
             <div class="row">  
-            <p class="forgot"><a href="#">Forgot Password?</a></p>
+            <p class="forgot"><a href="forgot_password.jsp">Forgot Password?</a></p>
             </div>
             
             <div class="row">

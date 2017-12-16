@@ -1,8 +1,3 @@
-<%-- 
-    Document   : verify
-    Created on : 28 Oct, 2017, 10:55:57 PM
-    Author     : paras
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,13 +11,16 @@
     
     <body>
     <%@include file="ConnectPage.jsp" %>
+    <%@include file="HeaderPage.jsp" %>
 
 <%
-    String error = "";
+    String error="";
     
     if(request.getParameter("btnSet")!=null){
         
-        String username = session.getAttribute("username").toString();
+        String usernamee = session.getAttribute("username").toString();
+        String username=request.getParameter("username");
+        out.println(username);
         String password, confirmPassword;
         password = request.getParameter("inputPassword");
         confirmPassword = request.getParameter("confirmPassword");
@@ -30,19 +28,20 @@
             smt = con.createStatement();
             String qry = "update login set password = '"+password+"' where username='"+username+"'";
             if(smt.executeUpdate(qry)>0){
-                out.println("Password Set successfully!<br /> Redirecting to homepage!");
+                out.println("<h3>Password Set successfully!<br /> Redirecting to homepage!<h3>");
                 
                 String qryy="select * from login where username='"+username+"'";
                 ResultSet rs=smt.executeQuery(qryy);
                 if(rs.next()){
                     if(rs.getString(3).equals("student"))
                     {
-                            response.setHeader("Refresh", "2;url=student_home.jsp");
+                            response.setHeader("Refresh", "3;url=faculty_home.jsp");
                     }
                     else
                     {
-                    response.setHeader("Refresh", "2;url=faculty_home.jsp");
+                    response.setHeader("Refresh", "3;url=student_home.jsp");
                     }
+                    
         
         }
             }
@@ -51,46 +50,31 @@
             error = "Passwords donot match. Try again.";
         }
     }
-    else{
-        String username=request.getParameter("username");
-        String hash=request.getParameter("hash");
-
-        String qry="select * from login where username='"+username+"' and hash='"+hash+"'";
-        ResultSet rs=smt.executeQuery(qry);
-        if(rs.next()){
-            if(rs.getString(4).equals("no")){
-                smt = con.createStatement();
-                qry = "update login set verified = 'yes' where username='"+username+"'";
-                if(smt.executeUpdate(qry)>0){
-                    out.println("Verified Successfully !<br /> Please Set your password!");
-                    session.setAttribute("username", username);
-                }
-            }
-            else{
-                // already verified...
-                response.sendRedirect("Generic_login_page.jsp");
-            }
-        }
-    }
+    
 
 %>
 
+<div class="row">
+    <div class="row">
+    </div>
+</div>
+    
 <div class="container">
 
     <form class="form-horizontal" method="post">
   <fieldset>
     
     <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+      <label for="inputPassword" class="col-lg-2 control-label">Enter new Password</label>
       <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
+        <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" required>
       </div>
     </div>
       
     <div class="form-group">
       <label for="confirmPassword" class="col-lg-2 control-label">Confirm Password</label>
       <div class="col-lg-10">
-        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
       </div>
     </div>
     
@@ -101,6 +85,7 @@
           <div class="alert-login">
             <%=error%>
           </div>
+         
         <button type="submit" class="btn btn-primary" name="btnSet">Submit</button>
       </div>
     </div>
@@ -110,6 +95,7 @@
 </form>
         
      </div>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -6909,3 +6909,8 @@ label {
 {
     background-image: url("images/CCET1.png");
 }
+
+.padding
+{
+  margin: 100px 20px 40px 20px;  
+}
