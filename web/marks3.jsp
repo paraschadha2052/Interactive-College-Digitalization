@@ -78,7 +78,7 @@
                  
             int i=1;
             
-           String qry3 ="select r.roll_no, s.name, r.SGPA from  result r, student s  where s.branch='"+b+"' and s.batch="+batch+" and s.roll_no=r.roll_no ";
+           String qry3 ="select r.roll_no, s.name, r.SGPA from  result r, student s  where s.branch='"+b+"' and s.batch="+batch+" and s.roll_no=r.roll_no and r.sub_code='"+sub_cod+"' ";
            ResultSet rs3 = smt.executeQuery(qry3);
             while(rs3.next())
             {
