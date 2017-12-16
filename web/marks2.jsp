@@ -57,7 +57,7 @@
       
       <th style="color: white">Student ID</th>
       <th style="color: white">Name</th>
-      <th style="color: white">SGPA </th>
+      <th style="color: white">GRADE</th>
    
     </tr>
   </thead>
