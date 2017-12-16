@@ -27,6 +27,7 @@
          <li><a href="view_attendance.jsp" style="color: wheat">VIEW ATTENDANCE</a></li>
         <li><a href="view_students.jsp " style="color: wheat">VIEW STUDENTS</a></li>
         <li><a href="view_faculty.jsp" style="color: wheat">FACULTY</a></li>
+        <li><a href="admin_view_marks.jsp" style="color: wheat">VIEW MARKS</a></li>
         <li><a href="#" style="color: wheat">EDIT SUBJECTS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
