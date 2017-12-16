@@ -14,6 +14,9 @@
     <body>
         <%@include file="ConnectPage.jsp" %>
     <%@include file="HeaderPage.jsp" %>
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
        <% 
        String username=request.getParameter("un");
        
@@ -37,5 +40,8 @@
         
         }
         %>
+        </div>
+    <div class="col-md-2"></div>
+</div>
     </body>
 </html>
