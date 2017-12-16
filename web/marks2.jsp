@@ -78,7 +78,7 @@
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>
                                      <td>
-                                         <input type="text"  name="<%=rs.getString(1)%>"> 
+                                         <input type="text"  name="<%=rs.getString(1)%>" size="2" required  > 
                                      </td>
                                </tr>
                               

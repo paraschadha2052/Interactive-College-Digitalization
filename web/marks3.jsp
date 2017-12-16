@@ -22,11 +22,16 @@
         <%@include file="ConnectPage.jsp" %>
         
          <%
-               out.println("hiii");
               
             String b=request.getParameter("j");
             String sub_cod=request.getParameter("i");
             int batch =Integer.parseInt(request.getParameter("k"));
+            
+            
+            String qry4 = "select sub_name from subject where sub_code='"+sub_cod+"'";
+     ResultSet rs4= smt.executeQuery(qry4);      
+     rs4.next();
+      String sub_name= rs4.getString(1);
              int count=0;        
              
             Statement smtt=null;
@@ -56,7 +61,7 @@
                
                  %>
                  
-      <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central"> <%= count %> RECORDS HAVE BEEN UPDATED </H3>
+      <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central"> <%= count %> RECORDS HAVE BEEN UPDATED w.r.t. <%=sub_name %> </H3>
             <div class="container-fluid">
             <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">
@@ -64,7 +69,7 @@
       <th></th>
       
       <th style="color: white">Student ID</th>
-      <th style="color: white">Name</th>
+      <th style="color: white">Name</th>      
       <th style="color: white">GPA</th>
     </tr>
   </thead>
@@ -73,7 +78,7 @@
                  
             int i=1;
             
-           String qry3 ="select * from  result where branch='"+b+"' and batch="+batch+" ";
+           String qry3 ="select r.roll_no, s.name, r.SGPA from  result r, student s  where s.branch='"+b+"' and s.batch="+batch+" and s.roll_no=r.roll_no ";
            ResultSet rs3 = smt.executeQuery(qry3);
             while(rs3.next())
             {
