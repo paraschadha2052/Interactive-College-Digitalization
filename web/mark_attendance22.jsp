@@ -107,7 +107,7 @@
             String b=request.getParameter("j");
             String sub_cod=request.getParameter("i");
             int s=Integer.parseInt(request.getParameter("k"));
-            int y=Integer.parseInt(request.getParameter("tbNewAtt"));
+            int y=1;
             int i=1;
             String qry = "select s.roll_no, s.name, a.tot_lec, a.lec_att from student s, attendance a  where s.roll_no=a.roll_no and s.branch='"+b+"' and s.semester="+s+" and a.sub_code='"+sub_cod+"' order by s.roll_no asc";
            

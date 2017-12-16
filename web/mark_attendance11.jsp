@@ -60,7 +60,10 @@
                                      <td><%=rs.getString(2)%></td>
                                      <td><%=rs.getString(3)%></td>
                                      <td><%=rs.getString(4)%></td>
-                                     <td><input type="text" name="<%=rs.getString(1)%>"></td>
+                                     <td>
+                                         <input type="radio"  name="<%=rs.getString(1)%>" value="0"> Absent 
+                                         <input type="radio"  name="<%=rs.getString(1)%>" value="1" checked> Present<br>
+                                     </td>
                                </tr>
                               
   
@@ -76,14 +79,7 @@
          </tbody>
     </table> 
          
-         <div class="form-group">
-      <label for="newAtt" class="col-lg-2 control-label">New Total Attendance</label>
-      <div class="col-lg-10">
-          <input type="text" name="tbNewAtt" class="form-control" id="batch">
-      </div>
-    </div>
-         
-         
+                 
         
          
          <div class="form-group">
