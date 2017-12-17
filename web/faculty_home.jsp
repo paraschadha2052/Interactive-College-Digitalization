@@ -79,7 +79,7 @@
                         while(rs1.next())
                             
                         {
-                            String filename = rs1.getString(2);
+                            rs1.beforeFirst();
                             %>
                           <div class="row notice_details">
                               <div class="col-md-2"><%=rs1.getString(4)%></div>

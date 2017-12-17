@@ -32,6 +32,7 @@ public class admin_upload_notice extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             try{
+            out.println("<h3>\nTrying to upload your file.</h3>\n\n <h2>Please wait...<h2>");
             MultipartRequest req = new MultipartRequest(request, "C:\\Users\\Monkey\\Documents\\NetBeansProjects\\Interactive-College-Digitalization2\\web\\noticeupload");
                
             final long MAX_RESUME_SIZE = 5242880; // 5MB -> 5 * 1024 * 1024

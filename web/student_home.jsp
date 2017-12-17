@@ -40,9 +40,7 @@
                          </div>
                  <div class="col-md-10">
                      <div class="legend1">
-                         
-                         
-                             LATEST NEWS/NOTICES 
+                        LATEST NEWS/NOTICES 
                      </div>
                      <%
             }
@@ -55,14 +53,14 @@
                     {
                         %>
                          <div class="notice_style">
-                <div class="row">
-                    <div class="col-md-12">
+                            <div class="row">
+                            <div class="col-md-12">
                       
-                        <h3>No Current Notices.</h3>   
+                                <h3>No Current Notices.</h3>   
                         
-                    </div>
-                </div>
-            </div>
+                            </div>
+                            </div>
+                        </div>
                      
                          <%
                     }
@@ -79,7 +77,8 @@
                         while(rs1.next())
                             
                         {
-                            String filename = rs1.getString(2);
+                            rs1.beforeFirst();
+                            
                             %>
                           <div class="row notice_details">
                               <div class="col-md-2"><%=rs1.getString(4)%></div>
