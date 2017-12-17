@@ -1,28 +1,25 @@
-<%-- 
-    Document   : save_details
-    Created on : Nov 11, 2017, 11:36:33 AM
-    Author     : DV
---%>
-<%@page import="java.util.UUID"%>
-<%@page import="java.util.Properties"%>
-<%@page import="javax.mail.*"%>
-<%@page import="javax.mail.internet.*"%>
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body>
+        
 <%@include file="ConnectPage.jsp" %>
+<%@include file="student_header.jsp" %>
+<%@include file="SesssionCheck.jsp" %>
 
 <%
-    String name,sex,dob,f_name, m_name,add_present, add_permanent, reg_no, roll_no, branch, uid,email, category, batch, mobile ,parent_mobile;
+    String roll_no,sex,add_present, add_permanent, branch, uid,email, category, mobile ,parent_mobile;
     int hostler;
 
-    name=request.getParameter("tbname");
+    roll_no=request.getParameter("tbRollNo");
     sex=request.getParameter("sexRadio");
-    dob=request.getParameter("tbDob");
-    f_name=request.getParameter("tbFname");
-    m_name=request.getParameter("tbMname");
     add_present=request.getParameter("txtAddPresent");
     add_permanent=request.getParameter("txtAddPermanent");
-    reg_no=request.getParameter("tbRegNo");
-    roll_no=request.getParameter("tbRollNo");
     branch=request.getParameter("branchSelect");
     uid=request.getParameter("tbUID");
     mobile=request.getParameter("tbMobile");
@@ -30,17 +27,21 @@
     email=request.getParameter("tbEmail");
     category=request.getParameter("categorySelect");
     hostler=Integer.parseInt(request.getParameter("hostlerRadio"));
-    batch=request.getParameter("tbBatch");
     
-    String qry ="update student SET name='"+name+"', sex='"+sex+"', dob='"+dob+"',father_name='"+f_name+"',mother_name= '"+m_name+"',add_present='"+add_present+"',add_permanent= '"+add_permanent+"', branch='"+ branch+"',UID= '"+uid+"',mobile='"+mobile+"',parent_mobile='"+parent_mobile+"',category= '"+category+"',hostler="+hostler+" ,batch='"+batch+"' WHERE roll_no='"+roll_no+"'" ;
+    String qry ="update student SET email_id = '"+email+"',  sex='"+sex+"',add_present='"+add_present+"',add_permanent= '"+add_permanent+"', branch='"+ branch+"',UID= '"+uid+"',mobile='"+mobile+"',parent_mobile='"+parent_mobile+"',category= '"+category+"',hostler="+hostler+" WHERE roll_no='"+roll_no+"'" ;
      
     int r=smt.executeUpdate(qry);
         if(r>0)
         {
             %>
-            <%@include file="student_header.jsp" %>
+            <div class="notice_style">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                Account Details Updated Succesfully.
             <%
-            out.println("<p>Record has been updated</p>");
+            
+            response.setHeader("Refresh", "1;url=student_home.jsp");
             %>
            
             <%
@@ -48,8 +49,21 @@
 
         else
         {
-                out.println("<p>Failed</p>");
+                %>
+                A problem occured while updating the Details. Please try again later.
+                <%
+                response.setHeader("Refresh", "2;url=student_home.jsp");
+                
         }
        
 
 %>
+                    </div>
+                    <div class="col-md-2">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            </body>
+</html>

@@ -37,7 +37,7 @@
     <div class="form-group">
       <label for="name" class="col-lg-2 control-label">Name</label>
       <div class="col-lg-10">
-          <input type="text" name="tbname" class="form-control" id="name" value="<%= rs.getString(1)%>" >
+          <input type="text" name="tbname" class="form-control" id="name" value="<%= rs.getString(1)%>" readonly >
       </div>
     </div>
     
@@ -68,28 +68,28 @@
     <div class="form-group">
       <label for="dob" class="col-lg-2 control-label">Date of Birth</label>
       <div class="col-lg-10">
-          <input type="text" name="tbDob" class="form-control" id="dob" value="<%= rs.getString(3)%>">
+          <input type="text" name="tbDob" class="form-control" id="dob" value="<%= rs.getString(3)%>" readonly>
       </div>
     </div>
     
     <div class="form-group">
       <label for="fname" class="col-lg-2 control-label">Father's Name</label>
       <div class="col-lg-10">
-          <input type="text" name="tbFname" class="form-control" id="fname" value="<%= rs.getString(4)%>" >
+          <input type="text" name="tbFname" class="form-control" id="fname" value="<%= rs.getString(4)%>" readonly>
       </div>
     </div>
     
     <div class="form-group">
       <label for="mname" class="col-lg-2 control-label">Mother's Name</label>
       <div class="col-lg-10">
-          <input type="text" name="tbMname" class="form-control" id="mname" value="<%= rs.getString(5)%>" >
+          <input type="text" name="tbMname" class="form-control" id="mname" value="<%= rs.getString(5)%>" readonly >
       </div>
     </div>
     
     <div class="form-group">
       <label for="add_present" class="col-lg-2 control-label">Present Address</label>
       <div class="col-lg-10">
-          <input type="text" name="txtAddPresent" class="form-control"  id="add_present" value="<%= rs.getString(6)%>" >
+          <input type="text" name="txtAddPresent" class="form-control"  id="add_present" value="<%= rs.getString(6)%>" required>
     
       </div>
     </div>
@@ -97,7 +97,7 @@
     <div class="form-group">
       <label for="add_permanent" class="col-lg-2 control-label">Permanent Address</label>
       <div class="col-lg-10">
-          <input type="text" name="txtAddPermanent" class="form-control"  id="add_permanent" value="<%= rs.getString(7)%>" >
+          <input type="text" name="txtAddPermanent" class="form-control"  id="add_permanent" value="<%= rs.getString(7)%>" required>
       </div>
     </div>
     
@@ -132,14 +132,14 @@
     <div class="form-group">
       <label for="uid" class="col-lg-2 control-label">UID</label>
       <div class="col-lg-10">
-          <input type="text" name="tbUID" class="form-control" id="uid" value="<%= rs.getString(11)%>" >
+          <input type="text" name="tbUID" class="form-control" id="uid" value="<%= rs.getString(11)%>" required >
       </div>
     </div>
     
     <div class="form-group">
       <label for="mobile_no" class="col-lg-2 control-label">Mobile No.</label>
       <div class="col-lg-10">
-          <input type="text" name="tbMobile" class="form-control" id="mobile_no" value="<%= rs.getString(12)%>" >
+          <input type="text" name="tbMobile" class="form-control" id="mobile_no" value="<%= rs.getString(12)%>" required >
       </div>
     </div>
     
@@ -147,7 +147,7 @@
     <div class="form-group">
       <label for="pmobile_no" class="col-lg-2 control-label">Parent's Mobile No.</label>
       <div class="col-lg-10">
-          <input type="text" name="tbPmobile" class="form-control" id="pmobile_no" value="<%= rs.getString(13)%>" >
+          <input type="text" name="tbPmobile" class="form-control" id="pmobile_no" value="<%= rs.getString(13)%>" required>
       </div>
     </div>
     
@@ -155,7 +155,7 @@
     <div class="form-group">
       <label for="email" class="col-lg-2 control-label">Email Id</label>
       <div class="col-lg-10">
-          <input type="text" name="tbEmail" class="form-control" id="email" value="<%= rs.getString(14)%>" readonly >
+          <input type="text" name="tbEmail" class="form-control" id="email" value="<%= rs.getString(14)%>" >
       </div>
     </div>
     
@@ -195,7 +195,7 @@
     <div class="form-group">
       <label for="batch" class="col-lg-2 control-label">Batch</label>
       <div class="col-lg-10">
-          <input type="text" name="tbBatch" class="form-control" id="batch" value="<%= rs.getString(17)%>" >
+          <input type="text" name="tbBatch" class="form-control" id="batch" value="<%= rs.getString(17)%>" readonly >
       </div>
     </div>
      <%

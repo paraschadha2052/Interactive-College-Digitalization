@@ -6914,3 +6914,11 @@ label {
 {
   margin: 100px 20px 40px 20px;  
 }
+.notice_style
+{
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    font-size: medium; 
+}
