@@ -13,15 +13,27 @@
     </head>
     <body>
         <%@include file="ConnectPage.jsp" %>
-    <%@include file="HeaderPage.jsp" %>
+    <%@include file="admin header.jsp" %>
     <%@include file="SesssionCheck.jsp" %> 
     
         <% 
        
        String fname=request.getParameter("fname");
-        out.println("<h4>A mail has been sent to faculty member "+fname+", to complete the Registration Process.<h4>");
+       %>
+       
+       <div class="notice_style">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+        A mail has been sent to faculty member <%=fname%> to complete the Registration Process.
                
-                        response.setHeader("Refresh", "2;url=admin_home.jsp");
+        </div>
+                    <div class="col-md-2">
+                        
+                    </div>
+                </div>
+            </div>
+                   <%     response.setHeader("Refresh", "2;url=admin_home.jsp");
          
         %>
         

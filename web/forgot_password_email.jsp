@@ -84,7 +84,19 @@ try
                     Transport.send(message);
 
                     System.out.println("Done");
-                    out.println("<h4>Hello, "+name+",\n A mail has been sent to your registered email address "+email+" regarding your username and password. Please login to your email account to find your Username and Password.\nThank you.</h4>\n\n <h3>Redirecting to Login Page...<h3>");
+                    %>
+                    <div class="notice_style">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                    Hello,<%=name%>,\n A mail has been sent to your registered email address <%=email%> regarding your username and password. Please login to your email account to find your Username and Password.\nThank you.\n\nRedirecting to Login Page...
+                    </div>
+                    <div class="col-md-2">
+                        
+                    </div>
+                </div>
+            </div>
+                    <%
                     response.setHeader("Refresh", "6;url=Generic_login_home.jsp");
 
                 }
@@ -150,7 +162,21 @@ try
                     Transport.send(message);
 
                     System.out.println("Done");
-                    out.println("<h4>Hello,"+name+",\n A mail has been sent to your registered email address "+email+" regarding your username and password. Please login to your email account to find your Username and Password.\nThank you.</h4>\n\n <h3>Redirecting to Login Page...<h3>");
+                    %>
+                    
+                    <div class="notice_style">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                    Hello,<%=name%>,\n A mail has been sent to your registered email address <%=email%> regarding your username and password. Please login to your email account to find your Username and Password.\nThank you.\n\nRedirecting to Login Page...
+                    </div>
+                    <div class="col-md-2">
+                        
+                    </div>
+                </div>
+            </div>
+                    
+                    <%
                     response.setHeader("Refresh", "6;url=Generic_login_home.jsp");
 
                 }
@@ -176,13 +202,39 @@ try
     }
         if(flag==1)
         {
-            out.println("<h4>This is not a registered email address.\n<h3>Redirecting to home Page...<h3>");
+            %>
+            <div class="notice_style">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                   This is not a registered email address.\nRedirecting to home Page...
+                    </div>
+                    <div class="col-md-2">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <%
             response.setHeader("Refresh", "2;url=Generic_login_home.jsp");
         }
     }
     else
     {
-        out.println("<h4>No records found.</h4>");
+        %>
+        <div class="notice_style">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                   No records found.
+                    </div>
+                    <div class="col-md-2">
+                        
+                    </div>
+                </div>
+            </div>
+        
+        <%
     }
 }
 catch(Exception ex)

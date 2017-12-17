@@ -30,7 +30,7 @@
         
         
         <div class="container">
-    <form action="save_details.jsp" class="form-horizontal" method="post">
+    <form action="save_student_edit_details.jsp" class="form-horizontal" method="post">
   <fieldset>
     <legend>Edit Details</legend>
     
