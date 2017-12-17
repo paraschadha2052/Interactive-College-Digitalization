@@ -50,7 +50,7 @@
                     {
                         attended = 0;
                         total = 0;
-                        per = 0;
+                        per = 100;
                         smt = con.createStatement(); 
                         String qry2 = "select count(date) from attendance where roll_no='"+username+"' and (attended='yes' or attended='claim') and sub_code='"+rs.getString(3)+"' group by sub_code";
                         rs1 = smt.executeQuery(qry2);
