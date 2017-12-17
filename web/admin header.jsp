@@ -29,7 +29,7 @@
         <li><a href="view_faculty.jsp" style="color: wheat">FACULTY</a></li>
         <li><a href="admin_view_marks.jsp" style="color: wheat">RESULT</a></li>
         <li><a href="admin_notice_upload.jsp" style="color: wheat">UPLOAD NOTICE</a></li>
-        <li><a href="#" style="color: wheat">EDIT SUBJECTS</a></li>
+        <li><a href="admin_subject" style="color: wheat">EDIT SUBJECTS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="logout.jsp" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
