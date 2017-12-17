@@ -76,10 +76,11 @@
                                 <div class="col-md-3">Notice</div>
                             </div>
                          <%
+                      rs1.beforeFirst();
                         while(rs1.next())
                             
                         {
-                            rs1.beforeFirst();
+                            
                             %>
                           <div class="row notice_details">
                               <div class="col-md-2"><%=rs1.getString(4)%></div>
