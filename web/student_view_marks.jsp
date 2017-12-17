@@ -74,6 +74,15 @@
             i=i+1;
                }
              }  
+              else
+              {
+                  
+                 %>
+                  <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central">our teacher did not update  the results for you, SORRY! :(</H3>
+       
+                 <%
+              }
+                    
              }
         } 
                  %>
