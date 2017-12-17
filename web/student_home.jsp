@@ -47,7 +47,7 @@
         }
                      int i=1;
                      
-                    String qry1 = "select * from notice where recipient= 'Student' OR recipient = 'Both'";
+                    String qry1 = "select * from notice where recipient= 'Student' OR recipient = 'Both' order by Date desc";
                     ResultSet rs1 = smt.executeQuery(qry1);
                     if(!rs1.next())
                     {

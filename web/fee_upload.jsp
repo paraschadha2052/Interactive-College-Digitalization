@@ -11,6 +11,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
          <link rel="stylesheet" href="css/stylesheet.css">
+         
+         <script type="text/javascript">
+    function Upload() {
+        var file = document.getElementById("pdf");
+        if (typeof (file.files) != "undefined") {
+            var size = parseInt(file.files[0].size / 1024);
+            if(size > 2048){
+            alert("File is too large. "+size+" KB.");
+            return false;
+        }
+        } else {
+            alert("This browser does not support HTML5.");
+            return false;
+        }
+    }
+</script>
+
     </head>
      
       
@@ -31,7 +48,7 @@
         
         
         <div class="container">
-    <form class="form-horizontal" action="uploadpic" enctype="multipart/form-data" method="post">
+    <form class="form-horizontal" action="uploadpic" enctype="multipart/form-data" onsubmit="return Upload()" method="post">
   <fieldset>
     <legend>Edit Details</legend>
     
@@ -59,7 +76,7 @@
       <div class="form-group">
       <label for="semesterSelect" class="col-lg-2 control-label">Semester</label>
       <div class="col-lg-10">
-          <select name="semesterSelect" class="form-control" id="semesterSelect">
+          <select name="semesterSelect" class="form-control" id="semesterSelect" required>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -75,21 +92,22 @@
   <div class="form-group">
       <label for="bti" class="col-lg-2 control-label">Bank Transaction ID</label>
       <div class="col-lg-10">
-          <input type="text" name="tbBTI" class="form-control" id="BTI" placeholder="Unique bank transaction ID" >
+          <input type="text" name="tbBTI" class="form-control" id="BTI" placeholder="Unique bank transaction ID" required>
       </div>
     </div>
       
       <div class="form-group">
       <label for="pdf" class="col-lg-2 control-label">Upload PDF</label>
       <div class="col-lg-10">
-          <input type="file" name="pdf" accept="application/pdf" class="form-control" id="pdf"  >
+          <input type="file" name="pdf" accept="application/pdf" class="form-control" id="pdf" required >
+          A maximum file of size 2mb is permitted.
       </div>
     </div>
     
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary" name="btnSubmit">Save</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+        <button type="submit" class="btn btn-primary" name="btnSubmit">Upload</button>
       </div>
     </div>
   </fieldset>

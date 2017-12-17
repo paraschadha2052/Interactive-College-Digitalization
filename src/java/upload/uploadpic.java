@@ -30,13 +30,9 @@ public class uploadpic extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             
             try{
-            MultipartRequest req = new MultipartRequest(request, "C:\\Users\\Monkey\\Documents\\NetBeansProjects\\Interactive-College-Digitalization2\\web\\fileupload");
-               
-            final long MAX_RESUME_SIZE = 5242880; // 5MB -> 5 * 1024 * 1024
+            MultipartRequest req = new MultipartRequest(request, "C:\\Users\\Monkey\\Documents\\NetBeansProjects\\Interactive-College-Digitalization2\\web\\feeupload" ,  2097152);
            
-            
                String rollno ,sem, bti,fname;
-               int price;
                rollno=req.getParameter("tbRollNo");
                sem=req.getParameter("semesterSelect");
                bti=req.getParameter("tbBTI");
