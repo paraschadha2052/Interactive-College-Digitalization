@@ -17,7 +17,7 @@
        
         
         <div class="container">
-    <form class="form-horizontal" action="admin_notice_upload" enctype="multipart/form-data" method="post">
+    <form class="form-horizontal" action="admin_upload_notice" enctype="multipart/form-data" method="post">
   <fieldset>
     <legend>Upload File</legend>
     
@@ -26,6 +26,18 @@
       <div class="col-lg-10">
           <textarea name="txtSubject" class="form-control" rows="2" id="subject"></textarea>
       
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="RecipientSelect" class="col-lg-2 control-label">Intended Recipient</label>
+      <div class="col-lg-10">
+          <select name="RecipientSelect" class="form-control" id="RecipientSelect">
+          <option>Student</option>
+          <option>Faculty</option>
+          <option>Both</option>
+         
+        </select>
       </div>
     </div>
  
