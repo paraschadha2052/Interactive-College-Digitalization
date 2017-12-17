@@ -47,7 +47,20 @@
                 String x=rs1.getString(1);
                 int a=Integer.parseInt(request.getParameter(x));
               
-         
+                
+                String qry3 ="update result set sgpa="+a+" where roll_no='"+x+"' and sub_code='"+sub_cod+"'";
+                  int rr=smtt.executeUpdate(qry3);
+                  if(rr>0)
+                  {
+                      String qry2 ="update result set sgpa="+a+" where roll_no='"+x+"' and sub_code='"+sub_cod+"'";
+                  int r=smtt.executeUpdate(qry2);
+                    if(r>0)
+                   {
+                       count=count+1;
+                   }
+                  }
+                  else
+                  {
            
                   String qry2 ="insert into result values ('"+x+"','"+sub_cod+"',"+a+")";
                   int r=smtt.executeUpdate(qry2);
@@ -56,7 +69,7 @@
                        count=count+1;
                    }
                    
-                            
+                  }        
             }
             
         
@@ -80,7 +93,7 @@
                  
             int i=1;
             
-           String qry3 ="select r.roll_no, s.name, r.SGPA from  result r, student s  where s.branch='"+b+"' and s.batch="+batch+" and s.roll_no=r.roll_no and r.sub_code='"+sub_cod+"' ";
+           String qry3 ="select r.roll_no, s.name, r.SGPA from  result r, student s  where s.branch='"+b+"' and s.batch="+batch+" and s.roll_no=r.roll_no and r.sub_code='"+sub_cod+"' order by r.roll_no asc ";
            ResultSet rs3 = smt.executeQuery(qry3);
             while(rs3.next())
             {
