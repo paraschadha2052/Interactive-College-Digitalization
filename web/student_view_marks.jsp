@@ -78,7 +78,7 @@
               {
                   
                  %>
-                  <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central">our teacher did not update  the results for you, SORRY! :(</H3>
+                  <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central">Sorry, This result have not been uploaded yet.</H3>
        
                  <%
               }

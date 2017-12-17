@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
-        <%@include file="admin header.jsp" %>
+        <%@include file="student_header.jsp" %>
              <%@include file="ConnectPage.jsp" %>
              <%@include file="SesssionCheck.jsp" %> 
         

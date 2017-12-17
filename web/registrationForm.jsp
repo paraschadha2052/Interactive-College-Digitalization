@@ -195,7 +195,7 @@
     <div class="form-group">
       <label for="dob" class="col-lg-2 control-label">Date of Birth</label>
       <div class="col-lg-10">
-          <input type="text" name="tbDob" class="form-control" id="dob" placeholder="MM/DD/YYYY"><script>DateInput('orderdate', true, 'DD-MON-YYYY')</script>
+          <input type="text" name="tbDob" class="form-control" id="dob" placeholder="MM/DD/YYYY">
       </div>
     </div>
     
