@@ -85,7 +85,7 @@
                               <div class="col-md-2"><%=rs1.getString(4)%></div>
                                 <div class="col-md-7"><%=rs1.getString(1)%></div>
                                 <div class="col-md-3">
-                                    <a href="http://localhost:8080/Interactive-College-Digitalization2/noticeupload/"+filename+".pdf" target="_blank">Notice</a>
+                                    <a href="./noticeupload/<%=rs1.getString(2)%>" target="_blank">Notice</a>
                                 </div>
                                
                             </div> 
