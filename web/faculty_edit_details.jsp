@@ -53,11 +53,7 @@
       <label for="branchSelect" class="col-lg-2 control-label">Branch</label>
       <div class="col-lg-10">
           <select name="branchSelect" class="form-control" id="branchSelect">
-          <option>CSE</option>
-          <option>ECE</option>
-          <option>ME</option>
-          <option>CE</option>
-         
+          <option><%= rs.getString(3)%></option>
         </select>
       </div>
     </div>
@@ -73,7 +69,7 @@
     <div class="form-group">
       <label for="email" class="col-lg-2 control-label">Email Id</label>
       <div class="col-lg-10">
-          <input type="text" name="tbEmail" class="form-control" id="email" value="<%= rs.getString(5)%>" onkeyup="checkEmail(this.value)" placeholder="email" required>
+          <input type="text" name="tbEmail" class="form-control" id="email" value="<%= rs.getString(5)%>" onkeyup="checkEmail(this.value)" placeholder="email" required readonly>
           <br> <div  id="resultEmail"> </div>
       </div>
     </div>
@@ -97,7 +93,7 @@
     <div class="form-group">
       <label for="post" class="col-lg-2 control-label">Designation</label>
       <div class="col-lg-10">
-          <input type="text" name="tbpost" class="form-control" id="post" value="<%= rs.getString(8)%>" placeholder="Designation" required>
+          <input type="text" name="tbpost" class="form-control" id="post" value="<%= rs.getString(8)%>" placeholder="Designation" required readonly>
       </div>
     </div>
       
