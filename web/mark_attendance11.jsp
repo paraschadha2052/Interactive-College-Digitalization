@@ -16,11 +16,23 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('input[type="radio"][name="changeValue"]').on('change', function() {
+                    if (this.value == 'present') {
+                        $('input[type="radio"][name^="roll_"][value="1"]').prop("checked", true);
+                    }
+                    else if (this.value == 'absent') {
+                        $('input[type="radio"][name^="roll_"][value="0"]').prop("checked", true);
+                    }
+                });
+            });
+        </script>
     </head>
     <body>
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
-        
         <%
             Calendar cal = Calendar.getInstance();
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -64,6 +76,12 @@
         %>   
         <div class="container">
         <h3><center>Attendance for: <%=todayDate%></center></h3>
+        <h5>
+            <center>
+                <input type="radio" name="changeValue" id="absent" value="absent">All absent
+                <input type="radio" name="changeValue" id="present" value="present">All present
+            </center>
+        </h5>
         <form method="post">
             <table class="table table-striped table-hover table-bordered">
                 <thead style="background-color: black">

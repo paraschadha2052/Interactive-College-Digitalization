@@ -96,21 +96,28 @@
 
         %>
         <div class="row"> 
-            <div class="col-md-2"><p class="admin"><a href="registrationForm.jsp" style="color: white">Student Registration</a></p>
+            
+            <div class="col-md-2" ><p class="admin"  style="background-color: #028fc0"><a href="registrationForm.jsp" style="color: white">Student Registration</a></p>
           </div>
-            <div class="col-md-8">   </div>
-        
-            <div class="col-md-2">
-                <p class="admin"><a href="admin_login.jsp" style="color: white">Admin Login</a></p>
+            <div class="col-md-3">   </div>
+            
+             <div class="col-md-2" ><p class="admin"  style="background-color: #028fc0"><a href="#" style="color: white">HOD Login</a></p>
+          </div>
+            
+            <div class="col-md-3">   </div>
+            <div class="col-md-2"  >
+                <p class="admin" style="background-color: #028fc0"><a href="admin_login.jsp" style="color: white">Admin Login</a></p>
             </div>
         </div>
+      
         
-        
+        <div class="row">
+            <div class="col-lg-6">
          <div class="form">
       
-      <ul class="tab-group">
-        <li class="tab active"><a href="#student_login">Student Login</a></li>
-        <li class="tab"><a href="#faculty_login">Faculty Login</a></li>
+             <ul class="tab-group" >
+        <li class="tab active" ><a href="#student_login">Student Login</a></li>
+        <li class="tab" ><a href="#faculty_login">Faculty Login</a></li>
       </ul>
       
       <div class="tab-content">
@@ -151,7 +158,7 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="button" name="btnLoginStudent">Login</button>
+                    <button type="submit" class="button" style="background-color: #028fc0" name="btnLoginStudent">Login</button>
             
                 </div>
             </div>
@@ -199,7 +206,7 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="button" name="btnLoginFaculty">Login</button>
+                    <button type="submit" class="button" style="background-color: #028fc0" name="btnLoginFaculty">Login</button>
             
                 </div>
             </div>
@@ -212,7 +219,15 @@
       </div>
             
          </div>
-        
+            </div>
+            
+            
+            
+            <div class="col-lg-6"></div>
+            
+            
+            
+        </div>
       
     <script  src="js/index.js"></script>
     </body>
