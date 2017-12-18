@@ -49,8 +49,17 @@
   </thead>
   <tbody>
          <%          
-            int i=1;
-            String qry = "select * from faculty order by f_id asc";
+         String branch=request.getParameter("branch");
+         int i=1;
+         String qry;
+         if(branch == "ALL")
+         {
+             qry = "select * from faculty order by f_id asc";
+         }
+         else
+         {
+             qry = "select * from faculty where department='"+branch+"'  order by f_id asc";
+         }
             ResultSet rs = smt.executeQuery(qry);
             while(rs.next())
             {

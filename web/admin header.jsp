@@ -26,7 +26,7 @@
         <li><a href="admin_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
          <li><a href="view_attendance.jsp" style="color: wheat">ATTENDANCE</a></li>
         <li><a href="view_students.jsp " style="color: wheat">STUDENTS</a></li>
-        <li><a href="view_faculty.jsp" style="color: wheat">FACULTY</a></li>
+        <li><a href="admin_view_faculty.jsp" style="color: wheat">FACULTY</a></li>
         <li><a href="admin_view_marks.jsp" style="color: wheat">RESULT</a></li>
         <li><a href="admin_notice_upload.jsp" style="color: wheat">UPLOAD NOTICE</a></li>
         <li><a href="admin_subject.jsp" style="color: wheat">EDIT SUBJECTS</a></li>

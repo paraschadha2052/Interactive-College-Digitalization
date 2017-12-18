@@ -1,6 +1,6 @@
 <%-- 
-    Document   : admin_subject
-    Created on : Dec 17, 2017, 11:05:59 PM
+    Document   : admin_view_faculty
+    Created on : Dec 18, 2017, 10:34:11 PM
     Author     : DV
 --%>
 
@@ -10,9 +10,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
         <%@include file="admin header.jsp" %>
@@ -20,9 +17,9 @@
         
         <div class="container">
             
-    <form class="form-horizontal" action="admin_subject1.jsp" method="post">
+    <form class="form-horizontal" action="view_faculty.jsp" method="post">
   <fieldset>
-    <legend>CHOOSE BRANCH TO VIEW SUBJECTS</legend>
+    <legend>CHOOSE BRANCH TO VIEW Faculty</legend>
     
          <div class="form-group">
       <label for="branch" class="col-lg-2 control-label">Branch: </label>
@@ -32,6 +29,7 @@
           <option>ECE</option>
           <option>ME</option>
           <option>CE</option>
+          <option>ALL</option>
         </select>
       </div>
     </div>
@@ -61,4 +59,3 @@
         </div>
     </body>
 </html>
-
