@@ -20,7 +20,7 @@
          <%@include file="ConnectPage.jsp" %>
          <%@include file="SesssionCheck.jsp" %> 
          
-         <div class="container-fluid">
+         <div class="container">
          
                   <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">

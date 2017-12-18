@@ -17,11 +17,11 @@
         
     </head>
     <body>
-       <div class="container-fluid"> 
+    
         <%@include file="admin header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
           
-        
+          <div class="container">  
         
         
         <%

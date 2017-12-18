@@ -43,7 +43,7 @@
                    if(x>0)
                    {
                        %>
-                       <div class="container-fluid" >       <h3>
+                       <div class="container" >       <h3>
                            Information Updated!
                                     </h3>
                        </div>
@@ -81,6 +81,7 @@
                   rs.next(); 
                    %>
      
+                   <div class="container">
         <form method="post">
                    <table align="center" >
                 
@@ -92,6 +93,7 @@
       </div>
     </div>
     
+      <br>
                   
     <div class="form-group">
       <label for="sub_name" class="col-lg-2 control-label">Subject Name</label>
@@ -100,12 +102,16 @@
       </div>
     </div>
                 
+      
+      <br>
     <div class="form-group">
       <label for="sub_credits" class="col-lg-2 control-label">Subject Credits</label>
       <div class="col-lg-10">
           <input type="text" name="sub_credits" class="form-control" id="sub_credits" value="<%= rs.getString(3)%>" >
       </div>
     </div>
+      
+      <br>
                 
     <div class="form-group">
       <label for="branch" class="col-lg-2 control-label">Branch</label>
@@ -114,6 +120,8 @@
       </div>
     </div>
                 
+      
+      <br>
       <div class="form-group">
       <label for="semesterSelect" class="col-lg-2 control-label">Semester: </label>
       <div class="col-lg-10">
@@ -129,6 +137,8 @@
         </select>
       </div>
     </div>
+      
+      <br>
     
             
  <div class="form-group">
@@ -160,6 +170,7 @@
       </div>
     </div>
            
+      <br>
             
             <tr>
                <td align="center"><input type="submit" name="btnSubmit" value="UPDATE"></td>
@@ -181,6 +192,7 @@
             }
             %>
             </form>
-            
+           
+                   </div>
     </body>
 </html>
