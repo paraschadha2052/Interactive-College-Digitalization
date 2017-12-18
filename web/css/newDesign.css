@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 18, 2017, 10:21:02 PM
+    Author     : Jitesh Mahla
+*/
+
+.nav>li>a {
+
+    padding: 15px 12px;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #555;
+    background-color: #428bca;
+}
+
+
