@@ -56,7 +56,7 @@
             {
           %>
   
-      <tr onclick="location.href='admin_update_subject.jsp?i=<%=rs.getString(1)%>&<%=rs.getString(6)%>'">
+      <tr onclick="location.href='admin_update_subject.jsp?i=<%=rs.getString(1)%>&j=<%=rs.getString(6)%>'">
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>

@@ -3,17 +3,18 @@
     Created on : Dec 17, 2017, 11:36:29 PM
     Author     : DV
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.*" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-            <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/stylesheet.css">
+         <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <link href="admincss.css" rel="stylesheet">
     </head>
     <body>
+        
         <%@include file="admin header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
         
@@ -31,8 +32,8 @@
               String sub_name, branch,F_id;
                int semester, sub_credits;
                sub_name=request.getParameter("sub_name");
-               sub_credits=Integer.parseInt(request.getParameter("credits"));
-               branch=request.getParameter("branchSelect");
+               sub_credits=Integer.parseInt(request.getParameter("sub_credits"));
+               branch=request.getParameter("branch");
                semester=Integer.parseInt(request.getParameter("semesterSelect"));
                F_id=request.getParameter("faculty");
                
@@ -55,9 +56,9 @@
                    {
                            out.println("<p>Failed</p>");
                    }
-                
+               
            }
-               if(request.getParameter("btnSubmit1")!=null) 
+              else if(request.getParameter("btnSubmit1")!=null) 
            {   
                    String qry2 ="delete from subject where sub_code='"+sub_code+"' and batch='"+batch+"'";
                    int x=smt.executeUpdate(qry2);
@@ -73,11 +74,11 @@
                  
            
            }
-           
+              else{
                
                    String qry ="select * from subject where sub_code='"+sub_code+"'and batch='"+batch+"' ";
                    ResultSet rs=smt.executeQuery(qry);    //resulset is set of records
-                   rs.next();
+                  rs.next(); 
                    %>
      
         <form method="post">
@@ -100,9 +101,9 @@
     </div>
                 
     <div class="form-group">
-      <label for="sub_code" class="col-lg-2 control-label">Subject Credits</label>
+      <label for="sub_credits" class="col-lg-2 control-label">Subject Credits</label>
       <div class="col-lg-10">
-          <input type="text" name="sub_code" class="form-control" id="sub_code" value="<%= rs.getString(3)%>" >
+          <input type="text" name="sub_credits" class="form-control" id="sub_credits" value="<%= rs.getString(3)%>" >
       </div>
     </div>
                 
@@ -129,16 +130,16 @@
       </div>
     </div>
     
-                
+            
  <div class="form-group">
       <label for="faculty" class="col-lg-2 control-label">Faculty: </label>
       <div class="col-lg-10">
           <select name="faculty" class="form-control" id="faculty">
-          <%@include file="ConnectPage.jsp" %>
-          <%
+          <% 
           
             Statement smtt=null;
-              smtt=con.createStatement();
+             smtt=con.createStatement();
+             
            String qry3 = "select * from faculty " ;
             ResultSet rs3 = smtt.executeQuery(qry3);
             while(rs3.next())
@@ -146,12 +147,12 @@
             %>
               <option value="<%=rs3.getString(1) %>"><%=rs3.getString(2) %></option>
             
-              <% } %>
+              <% }    %>
         </select>
       </div>
     </div>
     
-                   
+                     
     <div class="form-group">
       <label for="batch" class="col-lg-2 control-label">Batch</label>
       <div class="col-lg-10">
@@ -167,8 +168,9 @@
             </table>
             
              <%
+             
+              }
             
-               
            }
             else
             {
