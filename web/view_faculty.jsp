@@ -52,12 +52,14 @@
          String branch=request.getParameter("branch");
          int i=1;
          String qry;
-         if(branch == "ALL")
+         if(branch.equals("ALL"))
          {
+          //  out.println(branch);
              qry = "select * from faculty order by f_id asc";
          }
          else
          {
+            // out.println(branch);
              qry = "select * from faculty where department='"+branch+"'  order by f_id asc";
          }
             ResultSet rs = smt.executeQuery(qry);
