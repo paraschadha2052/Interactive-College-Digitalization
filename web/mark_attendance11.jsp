@@ -20,6 +20,7 @@
     <body>
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
+        
         <%
             Calendar cal = Calendar.getInstance();
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -61,7 +62,7 @@
               }
            }
         %>   
-        <div class="container-fluid">
+        <div class="container">
         <h3><center>Attendance for: <%=todayDate%></center></h3>
         <form method="post">
             <table class="table table-striped table-hover table-bordered">

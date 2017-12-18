@@ -15,11 +15,12 @@
         <link rel="stylesheet" href="css/stylesheet.css" /> 
     </head>
     <body>
-        <div class="container-fluid">
+       
         <%@include file="SesssionCheck.jsp" %> 
         <%@include file="student_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
 
+         <div class="container">
          <%
         if(username != null)
         {

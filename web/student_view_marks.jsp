@@ -20,6 +20,7 @@
          <%@include file="ConnectPage.jsp" %>
          <%@include file="SesssionCheck.jsp" %> 
          
+         <div class="container">
          <%
          if(username != null)
         {
@@ -93,5 +94,6 @@
                  
     </tbody>
     </table> 
+         </div>
     </body>
 </html>
