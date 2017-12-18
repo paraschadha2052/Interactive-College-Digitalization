@@ -24,9 +24,11 @@
          
              <div class="row"> 
             <div class="col-md-2"></div>
+            <a href="admin_add_faculty.jsp" style="color: white">
             <div class="col-md-8">
-                <p class="admin"><a href="admin_add_faculty.jsp" style="color: white">Add New Faculty</a></p>
+                <p class="admin">Add New Faculty</p>
             </div>
+            </a>
             <div class="col-md-2"></div>
         </div>
              
