@@ -1,9 +1,8 @@
 <%-- 
-    Document   : view_faculty
-    Created on : Dec 15, 2017, 8:39:01 AM
+    Document   : hod_view_faculty
+    Created on : Dec 18, 2017, 11:59:35 PM
     Author     : DV
 --%>
-
 
 <%@page import="java.sql.ResultSet"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,14 +16,15 @@
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
-         <%@include file="admin header.jsp" %>
+         <%@include file="hod_header.jsp" %>
          <%@include file="ConnectPage.jsp" %>
+          <%@include file="SesssionCheck.jsp" %>
          
          <div class="container">
          
              <div class="row"> 
             <div class="col-md-2"></div>
-            <a href="admin_add_faculty.jsp" style="color: white">
+            <a href="hod_add_faculty.jsp" style="color: white">
             <div class="col-md-8">
                 <p class="admin">Add New Faculty</p>
             </div>
@@ -47,9 +47,14 @@
       
          </tr>
   </thead>
-  <tbody>
-         <%          
-         String branch=request.getParameter("branch");
+  <tbody>       
+        
+        <%
+         String qry1 = "select department  from faculty where F_id='"+username+"'";
+         ResultSet rs1 = smt.executeQuery(qry1);
+         rs1.next();
+            
+            String branch=rs1.getString(1);      
          int i=1;
          String qry;
          if(branch.equals("ALL"))
