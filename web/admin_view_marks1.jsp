@@ -58,7 +58,7 @@
             ResultSet rs2 = smt.executeQuery(qry2);          
           while(rs2.next())
             {
-              String qry = "select distinct  r.SGPA , r.sub_code from result r, student s, subject su where r.roll_no='"+rs2.getString(1)+"' and r.roll_no=s.roll_no and su.semester='"+sem+"' order by r.sub_code asc";
+              String qry = "select distinct  r.SGPA , r.marks, r.sub_code from result r, student s, subject su where r.roll_no='"+rs2.getString(1)+"' and r.roll_no=s.roll_no and su.semester='"+sem+"' order by r.sub_code asc";
               ResultSet rs = smtt.executeQuery(qry); 
               rs1 = smttt.executeQuery(qry1);
            
@@ -72,7 +72,7 @@
             { 
                
            %>
-                                     <td><%=rs.getString(1)%></td>
+           <td>GRADE: <%=rs.getString(1)%> <br> MARKS: <%=rs.getString(2)%> </td>
            <%  
              
             }

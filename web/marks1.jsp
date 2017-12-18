@@ -13,12 +13,12 @@
     </head>
     <body>
       
-        <div class="container-fluid">
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
         
         <%@include file="SesssionCheck.jsp" %> 
-               
+            
+        <div class="container">   
             <div class="container-fluid">
                          <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">

@@ -40,7 +40,7 @@
              }
              else
              {
-           String qry = "select  distinct r.sub_code, su.sub_name, r.SGPA   from result r, student s, subject su where r.roll_no='"+username+"' and  r.sub_code=su.sub_code and su.semester="+sem+" and su.batch="+batch+" and su.branch='"+branch+"' order by r.sub_code asc";
+           String qry = "select  distinct r.sub_code, su.sub_name,  r.marks, r.SGPA, r.remark  from result r, student s, subject su where r.roll_no='"+username+"' and  r.sub_code=su.sub_code and su.semester="+sem+" and su.batch="+batch+" and su.branch='"+branch+"' order by r.sub_code asc";
               ResultSet rs1 = smt.executeQuery(qry);   
               if(rs1.next())
               {
@@ -51,8 +51,10 @@
     <tr>
         <th></th>
         <th style="color: white">Subject Code</th>
-         <th style="color: white">Subject</th>
-          <th style="color: white">GPA</th>
+         <th style="color: white">Subject</th> 
+      <th style="color: white">Marks</th> 
+      <th style="color: white">GPA</th>
+      <th style="color: white">Remarks</th>
       </tr>
   </thead>       
   <tbody>
@@ -67,6 +69,8 @@
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>
                                      <td><%=rs.getString(3)%></td>
+                                      <td><%=rs.getString(4)%></td>
+                                       <td><%=rs.getString(5)%></td>
                                            
                                </tr>
           

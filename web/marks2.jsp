@@ -17,11 +17,12 @@
     </head>
     <body>
           
-        <div class="container-fluid">
+       
         <%@include file="faculty_header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
         
         <%@include file="SesssionCheck.jsp" %> 
+         <div class="container">
         <%
                 String b=request.getParameter("j");
                 String sub_cod=request.getParameter("x");
@@ -59,7 +60,7 @@
       
       <th style="color: white">Student ID</th>
       <th style="color: white">Name</th>
-      <th style="color: white">GRADE</th>
+       <th style="color: white">Marks</th>
    
     </tr>
   </thead>
@@ -82,6 +83,7 @@
                                      <td>
                                          <input type="text"  name="<%=rs.getString(1)%>" size="2" required  > 
                                      </td>
+                                     
                                </tr>
                               
   
