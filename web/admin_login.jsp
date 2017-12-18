@@ -87,11 +87,7 @@
             <div class="alert">
                 <%=error%>
             </div>
-            
-            <div class="row">  
-            <p class="forgot"><a href="#">Forgot Password?</a></p>
-            </div>
-            
+           
             <div class="row">
                 <div class="col-md-12">
                     <button type="submit" class="button" name="btnLogin">Login</button>
