@@ -39,7 +39,6 @@
     <tr>
       <th></th>
       <th style="color: white">SUBJECT_CODE</th>
-      
       <th style="color: white">SEMESTER</th>
       <th style="color: white">SUBJECT_NAME</th>
       <th style="color: white">CREDITS</th>
@@ -57,7 +56,7 @@
             {
           %>
   
-      <tr onclick="location.href='#?x=<%=rs.getString(1)%>'">
+      <tr onclick="location.href='admin_update_subject.jsp?i=<%=rs.getString(1)%>&<%=rs.getString(6)%>'">
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>
