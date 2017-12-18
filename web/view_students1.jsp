@@ -33,8 +33,7 @@
       <th style="color: white">Gender</th>
        <th style="color: white">Contact No.</th>
       <th style="color: white">Parent's contact no</th>
-      <th style="color: white">Present Address</th>
-   
+      <th style="color: white">Student's Email</th>
       
          </tr>
   </thead>
@@ -59,8 +58,8 @@
                                      <td><%=rs.getString(8)%></td>
                                      <td><%=rs.getString(2)%></td>                                  
                                      <td><%=rs.getString(12)%></td>                               
-                                     <td><%=rs.getString(13)%></td>                                                               
-                                     <td><%=rs.getString(6)%></td>
+                                     <td><%=rs.getString(13)%></td>
+                                     <td><%=rs.getString(14)%></td>
                                </tr>
           
            <% 
