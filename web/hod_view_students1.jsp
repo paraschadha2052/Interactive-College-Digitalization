@@ -1,9 +1,8 @@
 <%-- 
-    Document   : view_students1
-    Created on : Dec 15, 2017, 8:03:19 AM
+    Document   : hod_view_students1
+    Created on : Dec 18, 2017, 11:57:31 PM
     Author     : DV
 --%>
-
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
-         <%@include file="admin header.jsp" %>
+         <%@include file="hod_header.jsp" %>
          <%@include file="ConnectPage.jsp" %>
          <%@include file="SesssionCheck.jsp" %> 
          
@@ -39,7 +38,13 @@
   </thead>
   <tbody>
          <%
-             String branch=request.getParameter("branchSelect");
+         
+         
+         String qry1 = "select department  from faculty where F_id='"+username+"'";
+         ResultSet rs1 = smt.executeQuery(qry1);
+         rs1.next();
+            
+            String branch=rs1.getString(1);
              int sem= Integer.parseInt(request.getParameter("semesterSelect"));
              int i=1;
              

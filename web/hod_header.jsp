@@ -1,6 +1,6 @@
 <%-- 
-    Document   : admin header
-    Created on : Dec 14, 2017, 10:24:42 PM
+    Document   : hod_header
+    Created on : Dec 18, 2017, 11:39:31 PM
     Author     : DV
 --%>
 
@@ -23,13 +23,15 @@
 
                   <div class="collapse navbar-collapse" id="navbarColor02" style="font-size: medium">
     <ul class="nav navbar-nav" >
-        <li><a href="admin_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
-         <li><a href="view_attendance.jsp" style="color: wheat">ATTENDANCE</a></li>
-        <li><a href="view_students.jsp " style="color: wheat">STUDENTS</a></li>
-        <li><a href="admin_view_faculty.jsp" style="color: wheat">FACULTY</a></li>
-        <li><a href="admin_view_marks.jsp" style="color: wheat">RESULT</a></li>
-        <li><a href="admin_notice_upload.jsp" style="color: wheat">UPLOAD NOTICE</a></li>
-        <li><a href="admin_subject.jsp" style="color: wheat">EDIT SUBJECTS</a></li>
+        <li><a href="hod_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+         <li><a href="hod_view_attendance.jsp" style="color: wheat"> ATTENDANCE</a></li>
+        <li><a href="hod_view_student.jsp " style="color: wheat">STUDENTS</a></li>
+        <li><a href="hod_view_faculty.jsp" style="color: wheat">FACULTY</a></li>
+        <li><a href="hod_view_marks.jsp" style="color: wheat">RESULT</a></li>
+        <li><a href="hod_upload_notice.jsp" style="color: wheat">UPLOAD NOTICE</a></li>
+        <li><a href="hod_subjects.jsp" style="color: wheat">EDIT SUBJECTS</a></li>
+        <li><a href="#" style="color: wheat">UPLOAD SUBJECTS</a></li>
+        <li><a href="#" style="color: wheat">UPLOAD STUDENT LIST</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="logout.jsp" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>

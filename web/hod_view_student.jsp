@@ -1,6 +1,6 @@
 <%-- 
-    Document   : admin_subject
-    Created on : Dec 17, 2017, 11:05:59 PM
+    Document   : hod_view_student
+    Created on : Dec 18, 2017, 11:55:56 PM
     Author     : DV
 --%>
 
@@ -15,27 +15,32 @@
         <link rel="stylesheet" href="css/stylesheet.css">
     </head>
     <body>
-        <%@include file="admin header.jsp" %>
+        <%@include file="hod_header.jsp" %>
              <%@include file="ConnectPage.jsp" %>
+             <%@include file="SesssionCheck.jsp" %> 
         
         <div class="container">
             
-    <form class="form-horizontal" action="admin_subject1.jsp" method="post">
+    <form class="form-horizontal" action="hod_view_students1.jsp" method="post">
   <fieldset>
-    <legend>CHOOSE BRANCH TO VIEW SUBJECTS</legend>
+    <legend>CHOOSE CLASS TO VIEW STUDENT DETAILS</legend>
     
-         <div class="form-group">
-      <label for="branch" class="col-lg-2 control-label">Branch: </label>
+      <div class="form-group">
+      <label for="semesterSelect" class="col-lg-2 control-label">Semester</label>
       <div class="col-lg-10">
-          <select name="branch" class="form-control" id="branch">
-          <option>CSE</option>
-          <option>ECE</option>
-          <option>ME</option>
-          <option>CE</option>
+          <select name="semesterSelect" class="form-control" id="semesterSelect">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
         </select>
       </div>
     </div>
-            
+    
     
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
@@ -61,4 +66,3 @@
         </div>
     </body>
 </html>
-
