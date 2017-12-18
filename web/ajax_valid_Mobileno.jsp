@@ -19,6 +19,28 @@
             {
                 out.println("Invalid Mobile number.");
             }
+        int l=mobileno.length();
+        if(l>0)
+            {
+               %>
+               <%@include file="ConnectPage.jsp" %>
+               <%
+           if(l>0)
+            {       
+              
+                   String qry ="SELECT mobile FROM student WHERE mobile='"+mobileno+"'";
+                   ResultSet rs=smt.executeQuery(qry);   
+                   while(rs.next())
+                   {
+                       %>
+                       Mobile no. <%= rs.getString(1)%> already in use. 
+                       <%
+                   }
+                                              
+                   con.close();
+               }
+           
+            }
         %>
     </body>
 </html>

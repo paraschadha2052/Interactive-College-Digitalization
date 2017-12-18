@@ -21,6 +21,29 @@
             {
                 out.println("Invalid Email address.");
             }
+        
+        int l=email.length();
+            if(l>0)
+            {
+               %>
+               <%@include file="ConnectPage.jsp" %>
+               <%
+           if(l>0)
+            {       
+              
+                   String qry ="SELECT email_id FROM student WHERE email_id='"+email+"'";
+                   ResultSet rs=smt.executeQuery(qry);   
+                   while(rs.next())
+                   {
+                       %>
+                       Email id "<%= rs.getString(1)%>" already in use. 
+                       <%
+                   }
+                                              
+                   con.close();
+               }
+           
+            }
         %> 
         
     </body>

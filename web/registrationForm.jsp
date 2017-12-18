@@ -163,7 +163,7 @@
       <label for="name" class="col-lg-2 control-label">Name</label>
       
       <div class="col-lg-10">
-          <input type="text" name="tbname" class="form-control" id="name" onkeyup="checkName(this.value);" placeholder="Name">
+          <input type="text" name="tbname" class="form-control" id="name" onkeyup="checkName(this.value);" placeholder="Name" required>
            <br> <div  id="resultName"> </div>  
       </div>
     </div>
@@ -195,14 +195,14 @@
     <div class="form-group">
       <label for="dob" class="col-lg-2 control-label">Date of Birth</label>
       <div class="col-lg-10">
-          <input type="text" name="tbDob" class="form-control" id="dob" placeholder="MM/DD/YYYY">
+          <input type="text" name="tbDob" class="form-control" id="dob" placeholder="MM/DD/YYYY" required>
       </div>
     </div>
     
     <div class="form-group">
       <label for="fname" class="col-lg-2 control-label">Father's Name</label>
       <div class="col-lg-10">
-          <input type="text" name="tbFname" class="form-control" id="fname" onkeyup="checkFname(this.value)" placeholder="Father's Name">
+          <input type="text" name="tbFname" class="form-control" id="fname" onkeyup="checkFname(this.value)" placeholder="Father's Name" required>
           <br> <div  id="resultFname"> </div>  
       </div>
     </div>
@@ -210,7 +210,7 @@
     <div class="form-group">
       <label for="mname" class="col-lg-2 control-label">Mother's Name</label>
       <div class="col-lg-10">
-          <input type="text" name="tbMname" class="form-control" id="mname" onkeyup="checkMname(this.value)" placeholder="Mother's Name">
+          <input type="text" name="tbMname" class="form-control" id="mname" onkeyup="checkMname(this.value)" placeholder="Mother's Name" required>
           <br> <div  id="resultMname"> </div> 
       </div>
     </div>
@@ -218,7 +218,7 @@
     <div class="form-group">
       <label for="add_present" class="col-lg-2 control-label">Present Address</label>
       <div class="col-lg-10">
-          <textarea name="txtAddPresent" class="form-control" rows="3" id="add_present"></textarea>
+          <textarea name="txtAddPresent" class="form-control" rows="3" id="add_present" required></textarea>
         <span class="help-block">Hostlers to mention their hostel address.</span>
       </div>
     </div>
@@ -226,14 +226,14 @@
     <div class="form-group">
       <label for="add_permanent" class="col-lg-2 control-label">Permanent Address</label>
       <div class="col-lg-10">
-          <textarea name="txtAddPermanent" class="form-control" rows="3" id="add_permanent"></textarea>
+          <textarea name="txtAddPermanent" class="form-control" rows="3" id="add_permanent" required></textarea>
       </div>
     </div>
     
     <div class="form-group">
       <label for="reg_no" class="col-lg-2 control-label">University Registration No.</label>
       <div class="col-lg-10">
-          <input type="text" name="tbRegNo" class="form-control" id="reg_no" placeholder="University Registration No.">
+          <input type="text" name="tbRegNo" class="form-control" id="reg_no" placeholder="University Registration No." required>
       </div>
     </div>
     
@@ -241,7 +241,7 @@
       <label for="roll_no" class="col-lg-2 control-label">College Roll No.</label>
       <div class="col-lg-10">
           
-          <input type="text" name="tbRollNo" class="form-control" id="roll_no" onkeyup="checkRollno(this.value)" placeholder="College Roll No.">
+          <input type="text" name="tbRollNo" class="form-control" id="roll_no" onkeyup="checkRollno(this.value)" placeholder="College Roll No." required>
           <br> <div  id="resultRollno"> </div>  
       </div>
     
@@ -250,7 +250,7 @@
     <div class="form-group">
       <label for="branchSelect" class="col-lg-2 control-label">Branch</label>
       <div class="col-lg-10">
-          <select name="branchSelect" class="form-control" id="branchSelect">
+          <select name="branchSelect" class="form-control" id="branchSelect" required>
           <option>CSE</option>
           <option>ECE</option>
           <option>ME</option>
@@ -264,7 +264,7 @@
     <div class="form-group">
       <label for="uid" class="col-lg-2 control-label">UID</label>
       <div class="col-lg-10">
-          <input type="text" name="tbUID" class="form-control" id="uid" onkeyup="checkUid(this.value)" placeholder="UID/Adhar card Number">
+          <input type="text" name="tbUID" class="form-control" id="uid" onkeyup="checkUid(this.value)" placeholder="UID/Adhar card Number" required>
           <br> <div  id="resultUid"> </div>
       </div>
     </div>
@@ -272,7 +272,7 @@
     <div class="form-group">
       <label for="mobile_no" class="col-lg-2 control-label">Mobile No.</label>
       <div class="col-lg-10">
-          <input type="text" name="tbMobile" class="form-control" id="mobile_no" onkeyup="checkMobileno(this.value)" placeholder="Mobile No.">
+          <input type="text" name="tbMobile" class="form-control" id="mobile_no" onkeyup="checkMobileno(this.value)" placeholder="Mobile No." required>
           <br> <div  id="resultMobileno"> </div>
       </div>
     </div>
@@ -281,7 +281,7 @@
     <div class="form-group">
       <label for="pmobile_no" class="col-lg-2 control-label">Parent's Mobile No.</label>
       <div class="col-lg-10">
-          <input type="text" name="tbPmobile" class="form-control" id="pmobile_no" onkeyup="checkPMobileno(this.value)" placeholder="Parent's Mobile No.">
+          <input type="text" name="tbPmobile" class="form-control" id="pmobile_no" onkeyup="checkPMobileno(this.value)" placeholder="Parent's Mobile No." required>
           <br> <div  id="resultPMobileno"> </div>
       </div>
     </div>
@@ -290,7 +290,7 @@
     <div class="form-group">
       <label for="email" class="col-lg-2 control-label">Email Id</label>
       <div class="col-lg-10">
-          <input type="text" name="tbEmail" class="form-control" id="email" onkeyup="checkEmail(this.value)" placeholder="email">
+          <input type="text" name="tbEmail" class="form-control" id="email" onkeyup="checkEmail(this.value)" placeholder="email" required>
           <br> <div  id="resultEmail"> </div>
       </div>
     </div>
@@ -299,7 +299,7 @@
     <div class="form-group">
       <label for="categorySelect" class="col-lg-2 control-label">Category</label>
       <div class="col-lg-10">
-          <select name="categorySelect" class="form-control" id="categorySelect">
+          <select name="categorySelect" class="form-control" id="categorySelect" required>
           <option>General</option>
           <option>SC</option>
           <option>ST</option>
@@ -331,7 +331,15 @@
     <div class="form-group">
       <label for="batch" class="col-lg-2 control-label">Batch</label>
       <div class="col-lg-10">
-          <input type="text" name="tbBatch" class="form-control" id="batch" placeholder="Batch (StartingYear-EndingYear)YYYY-YYYY ">
+          <input type="text" name="tbBatch" class="form-control" id="batch" placeholder="Batch (StartingYear-EndingYear)YYYY-YYYY " required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="image" class="col-lg-2 control-label">Upload Image</label>
+      <div class="col-lg-10">
+          <input type="file" name="image" accept="application/image" class="form-control" id="image" required >
+          A maximum image size of 2mb permitted.
       </div>
     </div>
     
