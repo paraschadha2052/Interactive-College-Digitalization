@@ -136,8 +136,11 @@
           <select name="faculty" class="form-control" id="faculty">
           <%@include file="ConnectPage.jsp" %>
           <%
+          
+            Statement smtt=null;
+              smtt=con.createStatement();
            String qry3 = "select * from faculty " ;
-            ResultSet rs3 = smt.executeQuery(qry3);
+            ResultSet rs3 = smtt.executeQuery(qry3);
             while(rs3.next())
             {
             %>
@@ -167,6 +170,13 @@
             
                
            }
+            else
+            {
+            %>
+            OOOOOOOOOOOOOOOOOOOOOOOOPPPPPPPPPPPPPPPPPPPssssssssss!
+            
+            <%
+            }
             %>
             </form>
             
