@@ -102,7 +102,7 @@
           </div>
             <div class="col-md-3">   </div>
             
-             <div class="col-md-2" ><p class="admin" ><a href="#" style="color: white">HOD Login</a></p>
+             <div class="col-md-2" ><p class="admin" ><a href="hod_login.jsp" style="color: white">HOD Login</a></p>
           </div>
             
             <div class="col-md-3">   </div>
