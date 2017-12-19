@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        
     </head>
     <body>
       
@@ -18,7 +19,8 @@
         
         <%@include file="SesssionCheck.jsp" %> 
             
-        <div class="container">   
+        <div class="container"> 
+            
             <div class="container-fluid">
                          <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">

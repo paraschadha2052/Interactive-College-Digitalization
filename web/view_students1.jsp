@@ -14,6 +14,29 @@
         
     <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
     <body>
          <%@include file="admin header.jsp" %>
@@ -21,6 +44,13 @@
          <%@include file="SesssionCheck.jsp" %> 
          
          <div class="container">
+             <div class="row">
+            <div class="col-md-2">
+        <a href="view_students.jsp" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10"></div>
+            
+        </div>
          
                   <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">

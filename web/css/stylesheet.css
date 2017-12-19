@@ -6979,4 +6979,24 @@ label {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
 
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}

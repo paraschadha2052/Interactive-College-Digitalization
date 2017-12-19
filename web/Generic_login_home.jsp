@@ -21,7 +21,7 @@
         
         <%@include file="ConnectPage.jsp" %>
         <%@include file="HeaderPage.jsp" %>
-    
+        
          <%
         String error=""; 
         String error1="";

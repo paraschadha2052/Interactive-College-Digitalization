@@ -12,6 +12,29 @@
          <link rel="stylesheet" href="css/bootstrap.min.css">
         
         <link href="admincss.css" rel="stylesheet">
+        <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
     <body>
         
@@ -82,6 +105,7 @@
                    %>
      
                    <div class="container">
+                        
         <form method="post">
                    <table align="center" >
                 

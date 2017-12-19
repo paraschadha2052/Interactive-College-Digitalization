@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/stylesheet.css">
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        
     </head>
     <body> 
       
@@ -127,6 +128,7 @@
                  
       <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central"> <%= count %> RECORDS HAVE BEEN UPDATED w.r.t. <%=sub_name %> </H3>
             <div class="container-fluid">
+                
             <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">
     <tr>

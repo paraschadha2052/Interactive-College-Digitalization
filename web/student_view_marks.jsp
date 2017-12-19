@@ -13,6 +13,30 @@
         
     <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/newDesign.css">
+        <style>
+            a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+a:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
     <body>
         
@@ -21,6 +45,15 @@
          <%@include file="SesssionCheck.jsp" %> 
          
          <div class="container">
+              
+             <div class="row">
+            <div class="col-md-2">
+        <a href="student_view_marks_sem.jsp" class="previous round">Back</a>
+            </div>
+            <div class="col-md-10 centr"></div>
+            
+        </div>
+         
          <%
          if(username != null)
         {
@@ -35,6 +68,7 @@
              if(sem>semM)
              {
                  %>
+                 
                   <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central"> Don't try to be  over smart kid. You Are in <%=semM %> semester.</H3>
        
                  <%

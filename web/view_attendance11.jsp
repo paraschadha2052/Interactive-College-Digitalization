@@ -13,6 +13,29 @@
         
     <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
     <body>
          <%@include file="admin header.jsp" %>
@@ -27,7 +50,14 @@
             String qry = "";
         %>
          
-    <div class="container">                                           
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-2">
+        <a href="view_attendance.jsp" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10"></div>
+            
+        </div>
     <%
         qry = "select sub_code, sub_name from subject where branch='"+branch+"' and semester='"+sem+"' and batch="+batch+"";
         smt = con.createStatement();
