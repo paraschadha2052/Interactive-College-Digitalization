@@ -10,10 +10,41 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
       <body>
         <%@include file="admin header.jsp" %>
         <div class="container">
+            <% String temp =request.getParameter("branch"); %>
+            <div class="row">
+            <div class="col-md-2">
+        <a href="admin_subject1.jsp?branch=<%=temp%>" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10"></div>
+            
+        </div>
             
         
             <form action="admin_insert_subject.jsp" class="form-horizontal" method="post">

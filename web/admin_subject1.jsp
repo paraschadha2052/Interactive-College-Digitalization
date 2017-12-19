@@ -59,7 +59,7 @@ backlink:hover {
         String branch=request.getParameter("branch");
         %>
         <div class="row"> 
-            <div class="col-md-2"><p class="admin"><a href="admin_add_subject.jsp" style="color: white">Add Subject</a></p>
+            <div class="col-md-2"><p class="admin"><a href="admin_add_subject.jsp?branch=<%=branch%>" style="color: white">Add Subject</a></p>
           </div>
         </div>
         <br>
@@ -86,7 +86,7 @@ backlink:hover {
             {
           %>
   
-      <tr onclick="location.href='admin_update_subject.jsp?i=<%=rs.getString(1)%>&j=<%=rs.getString(6)%>'">
+      <tr onclick="location.href='admin_update_subject.jsp?branch=<%=branch%>&i=<%=rs.getString(1)%>&j=<%=rs.getString(6)%>'">
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>

@@ -42,6 +42,7 @@ backlink:hover {
         <%@include file="ConnectPage.jsp" %>
         
         <%
+        String temp =request.getParameter("branch");
              String sub_code;
              int batch;
             if(request.getParameter("i")!=null && request.getParameter("j")!=null)
@@ -105,6 +106,14 @@ backlink:hover {
                    %>
      
                    <div class="container">
+                       
+                       <div class="row">
+            <div class="col-md-2">
+        <a href="admin_subject1.jsp?branch=<%=temp%>" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10"></div>
+            
+        </div>
                         
         <form method="post">
                    <table align="center" >
