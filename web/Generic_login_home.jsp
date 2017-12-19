@@ -113,7 +113,7 @@
       
         
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
          <div class="form">
       
              <ul class="tab-group" >
@@ -224,7 +224,7 @@
             
             
             
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                
                     
                    
