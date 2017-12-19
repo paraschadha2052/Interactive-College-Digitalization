@@ -110,10 +110,20 @@
 </nav>
         </div>
         
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+        <marquee  onmousedown="this.stop();" onmouseup="this.start();" scrollamount="8">                                    
+            Welcome to Chandigarh College of Engineering and Technology.
+        </marquee>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        
       
         
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-4">
          <div class="form">
       
              <ul class="tab-group" >
@@ -224,7 +234,7 @@
             
             
             
-            <div class="col-lg-6">
+            <div class="col-md-8">
                
                     
                    
