@@ -96,20 +96,20 @@
         }
 
         %>
-        <div class="row"> 
-            
-            <div class="col-md-2" ><p class="admin" ><a href="registrationForm.jsp" style="color: white">Student Registration</a></p>
-          </div>
-            <div class="col-md-3">   </div>
-            
-             <div class="col-md-2" ><p class="admin" ><a href="hod_login.jsp" style="color: white">HOD Login</a></p>
-          </div>
-            
-            <div class="col-md-3">   </div>
-            <div class="col-md-2"  >
-                <p class="admin"><a href="admin_login.jsp" style="color: white">Admin Login</a></p>
-            </div>
+        
+        <div style="background-color: #428bca">
+        <nav class="navbar">
+
+                  <div class="container-fluid" style="font-size: medium">
+    <ul class="nav navbar-nav navbar-right" >
+        <li><a href="registrationForm.jsp" style="color: white"><span class="glyphicon glyphicon-home"></span>Student Registration</a></li>
+         <li><a href="hod_login.jsp"  style="color: white">HOD Login</a></li>
+        <li><a href="admin_login.jsp" style="color: white">Admin Login</a></li>
+      </ul>
+     </div>
+</nav>
         </div>
+        
       
         
         <div class="row">
