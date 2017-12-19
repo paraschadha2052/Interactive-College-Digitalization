@@ -14,6 +14,29 @@
         
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/Logincss.css">
+        <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
         
     </head>
     <body>
@@ -21,7 +44,14 @@
         <%@include file="admin header.jsp" %>
         <%@include file="ConnectPage.jsp" %>
           
-          <div class="container">  
+          <div class="container">
+              <div class="row">
+            <div class="col-md-2">
+        <a href="admin_subject.jsp" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10"></div>
+            
+        </div>
         
         
         <%
@@ -29,7 +59,7 @@
         String branch=request.getParameter("branch");
         %>
         <div class="row"> 
-            <div class="col-md-2"><p class="admin"><a href="admin_add_subject.jsp" style="color: white">Add Subject</a></p>
+            <div class="col-md-2"><p class="admin"><a href="admin_add_subject.jsp?branch=<%=branch%>" style="color: white">Add Subject</a></p>
           </div>
         </div>
         <br>
@@ -56,7 +86,7 @@
             {
           %>
   
-      <tr onclick="location.href='admin_update_subject.jsp?i=<%=rs.getString(1)%>&j=<%=rs.getString(6)%>'">
+      <tr onclick="location.href='admin_update_subject.jsp?branch=<%=branch%>&i=<%=rs.getString(1)%>&j=<%=rs.getString(6)%>'">
                                      <td> <%=i %> </td>
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>

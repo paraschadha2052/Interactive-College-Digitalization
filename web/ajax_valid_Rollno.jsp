@@ -16,12 +16,12 @@
            if(l>0)
             {       
               
-                   String qry ="SELECT * FROM student WHERE roll_no='"+rollno+"'";
+                   String qry ="SELECT roll_no FROM student WHERE roll_no='"+rollno+"'";
                    ResultSet rs=smt.executeQuery(qry);   
                    while(rs.next())
                    {
                        %>
-                       ALREADY IN USE: <%= rs.getString(1)%>
+                       Roll no. <%= rs.getString(1)%> already in use. 
                        <%
                    }
                                               

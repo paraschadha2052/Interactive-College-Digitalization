@@ -12,12 +12,45 @@ and open the template in the editor.
   
     color: #777777;
   background-color: #ffffff;
-  padding: 40px;
-  max-width: 600px;
+  padding: 25px 30px 30px 30px;
+  max-width: 400px;
   margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3); 
 }
+
+.notice_bulletin {
+  
+    color: #777777;
+  background-color: #ffffff;
+  padding : 25px 30px 30px 30px;
+  max-width: 920px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3); 
+}
+
+.notice_header {
+    text-align: center;
+  border: 0;
+  padding: 10px;
+  outline: none;
+  border-radius: 1px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background: #428bca;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  width: 100%;
+}
+.notice_header:hover {
+  background: #2c74b2;
+  color: #ffffff;
+}
+
+
 
 
 .tab-group {
@@ -36,7 +69,7 @@ and open the template in the editor.
   padding: 10px;
   background: rgba(160, 179, 176, 0.25);
   border-radius: 2px;
-  color: #505959;
+  color: #1e68a7;
   font-size: 20px;
   float: left;
   width: 50%;
@@ -46,11 +79,11 @@ and open the template in the editor.
   transition: .5s ease;
 }
 .tab-group li a:hover {
-  background: #d9230f;
+  background: #2c74b2;
   color: #ffffff;
 }
 .tab-group .active a {
-  background: #E65D5D;
+  background: #428bca;
   color: #ffffff;
 }
 
@@ -90,7 +123,7 @@ and open the template in the editor.
   padding: 5px 0;
   font-size: 20px;
   text-transform: uppercase;
-  background: #E65D5D;
+  background: #428bca;
   color: #ffffff;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -98,7 +131,7 @@ and open the template in the editor.
   width: 100%;
 }
 .button:hover, .button:focus {
-  background: #d9230f;
+  background: #2c74b2;
 }
 
 
@@ -110,7 +143,7 @@ and open the template in the editor.
   text-decoration: none;
   margin: 10px 25px 2px 0px;
   padding: 8px;
-  background-color: #E65D5D;
+  background-color: #428bca;
   border-radius: 2px;
   color: #ffffff;
   font-size: 15px;
@@ -121,7 +154,7 @@ and open the template in the editor.
   transition: .5s ease;
 }
 .admin:hover {
-  background: #d9230f;
+  background: #2c74b2;
   color: #ffffff;
 }
 
@@ -153,7 +186,7 @@ a:link
   display: block;
   text-decoration: none;
   padding: 10px;
-  background: #E65D5D;
+  background: #428bca;
   color: #ffffff;
   border-radius: 2px;
   font-size: 20px;

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : admin_add_subject
-    Created on : Dec 17, 2017, 9:43:07 PM
+    Document   : hod_add_subject
+    Created on : Dec 19, 2017, 12:12:27 PM
     Author     : DV
 --%>
 
@@ -10,41 +10,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <style>
-            .backlink {
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 16px;
-}
-
-
-backlink:hover {
-    background-color: #2c74b2;
-    color: white;
-}
-
-.previous {
-    background-color: #428BCA;
-    color: white;
-}
-
-
-.round {
-    border-radius: 10%;
-}
-        </style>
     </head>
       <body>
-        <%@include file="admin header.jsp" %>
-        <div class="container">
-            <% String temp =request.getParameter("branch"); %>
-            <div class="row">
-            <div class="col-md-2">
-        <a href="admin_subject1.jsp?branch=<%=temp%>" class="previous round backlink">Back</a>
-            </div>
-            <div class="col-md-10"></div>
+         <%@include file="hod_header.jsp" %>
+         <%@include file="ConnectPage.jsp" %>
+         <%@include file="SesssionCheck.jsp" %> 
+         
+           <%
+           
+           String branch="";
+      String qry11 = "select department  from faculty where F_id='"+username+"'";
+         ResultSet rs11 = smt.executeQuery(qry11);
+         rs11.next();
             
-        </div>
+             branch=rs11.getString(1); 
+            %>
+        <div class="container">
             
         
             <form action="admin_insert_subject.jsp" class="form-horizontal" method="post">
@@ -82,10 +63,7 @@ backlink:hover {
       <label for="branchSelect" class="col-lg-2 control-label">Branch</label>
       <div class="col-lg-10">
           <select name="branchSelect" class="form-control" id="branchSelect">
-          <option>CSE</option>
-          <option>ECE</option>
-          <option>ME</option>
-          <option>CE</option>
+          <option><%=branch %></option>
          
         </select>
       </div>
@@ -111,16 +89,15 @@ backlink:hover {
       <label for="faculty" class="col-lg-2 control-label">Faculty: </label>
       <div class="col-lg-10">
           <select name="faculty" class="form-control" id="faculty">
-          <%@include file="ConnectPage.jsp" %>
-          <%
-           String qry3 = "select * from faculty " ;
+          <% 
+           String qry3 = "select * from faculty where department='"+branch+"' " ;
             ResultSet rs3 = smt.executeQuery(qry3);
             while(rs3.next())
             {
             %>
               <option value="<%=rs3.getString(1) %>"><%=rs3.getString(2) %></option>
             
-              <% } %>
+              <% }  %>
         </select>
       </div>
     </div>

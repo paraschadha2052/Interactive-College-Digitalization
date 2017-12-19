@@ -15,6 +15,29 @@
         
     <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/stylesheet.css">
+        <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
     <body>
          <%@include file="admin header.jsp" %>
@@ -23,7 +46,11 @@
          <div class="container">
          
              <div class="row"> 
-            <div class="col-md-2"></div>
+                 <a href="admin_view_faculty.jsp" style="color: white">
+                 <div class="col-md-2">
+                     <p class="admin">Back</p>
+                 </div>
+                 </a>
             <a href="admin_add_faculty.jsp" style="color: white">
             <div class="col-md-8">
                 <p class="admin">Add New Faculty</p>

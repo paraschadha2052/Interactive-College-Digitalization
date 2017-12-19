@@ -24,20 +24,20 @@
         
         
 <%@include file="HeaderPage.jsp" %>
-        <div class="row container-fluid" style="background-color: black">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div style="background-color: #428bca">
+              <nav class="navbar">
 
                   <div class="collapse navbar-collapse" id="navbarColor02" style="font-size: medium">
                       <ul class=" nav navbar-nav"  >
-                          <li ><a href="student_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
-          <li><a href="fee_upload.jsp" style="color: wheat">REGISTRATION</a></li>
-         <li><a href="student_subject.jsp" style="color: wheat">SUBJECTS</a></li>
-         <li><a href="attendance.jsp" style="color: wheat">ATTENDANCE</a></li>
-        <li><a href="student_view_marks_sem.jsp" style="color: wheat">VIEW MARKS</a></li>
-        <li><a href="edit_student_details.jsp" style="color: wheat">EDIT DETAILS</a></li>
+                          <li ><a href="student_home.jsp" style="color: white"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+          <li><a href="fee_upload.jsp" style="color: white">REGISTRATION</a></li>
+         <li><a href="student_subject.jsp" style="color: white">SUBJECTS</a></li>
+         <li><a href="attendance.jsp" style="color: white">ATTENDANCE</a></li>
+        <li><a href="student_view_marks_sem.jsp" style="color: white">VIEW MARKS</a></li>
+        <li><a href="edit_student_details.jsp" style="color: white">EDIT DETAILS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="logout.jsp" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+        <li><a href="logout.jsp" style="color: white"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
   </div>
 </nav>

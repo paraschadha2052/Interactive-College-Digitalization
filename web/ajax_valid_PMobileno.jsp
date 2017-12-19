@@ -19,6 +19,29 @@
             {
                 out.println("Invalid Parent's Mobile number.");
             }
+        
+        int l=pmobileno.length();
+        if(l>0)
+            {
+               %>
+               <%@include file="ConnectPage.jsp" %>
+               <%
+           if(l>0)
+            {       
+              
+                   String qry ="SELECT parent_mobile FROM student WHERE parent_mobile='"+pmobileno+"'";
+                   ResultSet rs=smt.executeQuery(qry);   
+                   while(rs.next())
+                   {
+                       %>
+                       Parent's Mobile no. <%= rs.getString(1)%> already in use. 
+                       <%
+                   }
+                                              
+                   con.close();
+               }
+           
+            }
         %>
     </body>
 </html>

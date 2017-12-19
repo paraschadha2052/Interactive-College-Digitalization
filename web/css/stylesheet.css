@@ -3014,6 +3014,8 @@ select[multiple].input-lg {
       touch-action: manipulation;
   cursor: pointer;
   background-image: none;
+    background-color: #474949;
+
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 8px 12px;
@@ -3119,25 +3121,25 @@ fieldset[disabled] .btn-default.focus {
 }
 .btn-primary {
   color: #ffffff;
-  background-color: #d9230f;
-  border-color: #d9230f;
+  background-color: #428bca;
+  border-color: #2c74b2;
 }
 .btn-primary:focus,
 .btn-primary.focus {
   color: #ffffff;
-  background-color: #a91b0c;
+  background-color: #428bca;
   border-color: #621007;
 }
 .btn-primary:hover {
   color: #ffffff;
-  background-color: #a91b0c;
+  background-color: #428bca;
   border-color: #a01a0b;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #a91b0c;
+  background-color: #428bca;
   border-color: #a01a0b;
 }
 .btn-primary:active:hover,
@@ -3992,7 +3994,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #222426;
+  background-color: #2c74b2;
 }
 .nav > li.disabled > a {
   color: #FFFFFF;
@@ -4012,7 +4014,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav .nav-divider {
   height: 1px;
-  margin: 8px 0;
+  margin: 1px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4020,7 +4022,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   max-width: none;
 }
 .nav-tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 0px solid #dddddd;
 }
 .nav-tabs > li {
   float: left;
@@ -4333,6 +4335,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   line-height: 18px;
 }
 @media (max-width: 767px) {
@@ -4367,8 +4371,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .navbar-form {
@@ -4380,7 +4384,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 2px;
-  margin-bottom: 2px;
+  margin-bottom: 0px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -6920,7 +6924,7 @@ label {
     margin-top: 30px;
     text-align: center;
     font-weight: bold;
-    color: red;
+    color: #1769b0;
     font-size: medium; 
 }
 .notice_style1
@@ -6942,7 +6946,7 @@ label {
   font-weight: bold;
   font-size: 24px;
   line-height: inherit;
-  color: #DF1717 ;
+  color: #2c74b2 ;
   border: 0;
   border-bottom: 2px solid #978686;
 }
@@ -6954,7 +6958,7 @@ label {
   padding : 5px 2.5px 5px 2.5px;
   margin-bottom: 5px;
   font-weight: 100;
-  font-size: 17px;
+  font-size: 14px;
   line-height: inherit;
   color: #0D0303 ;
   border: 0;
@@ -6975,4 +6979,24 @@ label {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
 
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}

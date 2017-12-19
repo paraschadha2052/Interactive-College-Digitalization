@@ -12,6 +12,7 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="css/Logincss.css">
+        <link rel="stylesheet" href="css/newDesign.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       
@@ -20,7 +21,7 @@
         
         <%@include file="ConnectPage.jsp" %>
         <%@include file="HeaderPage.jsp" %>
-    
+        
          <%
         String error=""; 
         String error1="";
@@ -95,24 +96,34 @@
         }
 
         %>
-        <div class="row"> 
-            
-            <div class="col-md-2" ><p class="admin"  style="background-color: #028fc0"><a href="registrationForm.jsp" style="color: white">Student Registration</a></p>
-          </div>
-            <div class="col-md-3">   </div>
-            
-             <div class="col-md-2" ><p class="admin"  style="background-color: #028fc0"><a href="#" style="color: white">HOD Login</a></p>
-          </div>
-            
-            <div class="col-md-3">   </div>
-            <div class="col-md-2"  >
-                <p class="admin" style="background-color: #028fc0"><a href="admin_login.jsp" style="color: white">Admin Login</a></p>
-            </div>
+        
+        <div style="background-color: #428bca">
+        <nav class="navbar">
+
+                  <div class="container-fluid" style="font-size: medium">
+    <ul class="nav navbar-nav navbar-right" >
+        <li><a href="registrationForm.jsp" style="color: white"><span class="glyphicon glyphicon-home"></span>Student Registration</a></li>
+         <li><a href="hod_login.jsp"  style="color: white">HOD Login</a></li>
+        <li><a href="admin_login.jsp" style="color: white">Admin Login</a></li>
+      </ul>
+     </div>
+</nav>
         </div>
+        
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+        <marquee  onmousedown="this.stop();" onmouseup="this.start();" scrollamount="8">                                    
+            Welcome to Chandigarh College of Engineering and Technology.
+        </marquee>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        
       
         
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-md-4">
          <div class="form">
       
              <ul class="tab-group" >
@@ -152,13 +163,13 @@
                 <%=error%>
             </div>
             
-            <div class="row">  
-            <p class="forgot"><a href="forgot_password.jsp">Forgot Password?</a></p>
+            <div class="row forgot" >  
+            <p><a href="forgot_password.jsp" style="color: #064983">Forgot Password?</a></p>
             </div>
             
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="button" style="background-color: #028fc0" name="btnLoginStudent">Login</button>
+                    <button type="submit" class="button" name="btnLoginStudent">Login</button>
             
                 </div>
             </div>
@@ -201,12 +212,12 @@
             </div>
             
             <div class="row">  
-            <p class="forgot"><a href="forgot_password.jsp">Forgot Password?</a></p>
+            <p class="forgot"><a href="forgot_password.jsp" style="color: #064983" >Forgot Password?</a></p>
             </div>
             
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="button" style="background-color: #028fc0" name="btnLoginFaculty">Login</button>
+                    <button type="submit" class="button"  name="btnLoginFaculty">Login</button>
             
                 </div>
             </div>
@@ -223,11 +234,76 @@
             
             
             
-            <div class="col-lg-6"></div>
+            <div class="col-md-8">
+               
+                    
+                   
+                <div class="notice_bulletin">
+                     <%
+                    String qry1 = "select * from notice order by Date desc LIMIT 5";
+                    ResultSet rs1 = smt.executeQuery(qry1);
+                    if(!rs1.next())
+                    {
+                        %>
+                        
+                         <div class="notice_style">
+                            <div class="row">
+                            <div class="col-md-12">
+                      
+                                <h3>No Current Notices.</h3>   
+                        
+                            </div>
+                            </div>
+                        </div>
+                     
+                         <%
+                    }
+                    else
+                    {
+                        
+                        %>
+                        <div class="notice_header"> <b>LATEST NEWS/NOTICES</b></div> 
+                         <div class="row notice_head">
+                                <div class="col-md-2">Date</div>
+                                <div class="col-md-7">Subject</div>
+                                <div class="col-md-3">Notice</div>
+                            </div>
+                         <%
+                        rs1.beforeFirst();
+                        while(rs1.next())
+                            
+                        {
+                            
+                            
+                            %>
+                          <div class="row notice_details">
+                              <div class="col-md-2"><%=rs1.getString(4)%></div>
+                                <div class="col-md-7"><%=rs1.getString(1)%></div>
+                                <div class="col-md-3">
+                                    <a href="./noticeupload/<%=rs1.getString(2)%>" target="_blank"><button type="button" class="btn-xs" style="background-color: #428bca ; color: white" href="">Download</button></a> 	
+                                   
+                                </div>
+                               
+                            </div> 
+  
+        
+            <% 
+            }
+                    }
             
-            
-            
+           
+               
+                 %>
+                 
+                 <a href="notices.jsp?n=1&next=1&prev=1">view more</a>
+                
+                </div>
+           
         </div>
+                
+            </div>
+            
+           
       
     <script  src="js/index.js"></script>
     </body>

@@ -12,6 +12,29 @@
          <link rel="stylesheet" href="css/bootstrap.min.css">
         
         <link href="admincss.css" rel="stylesheet">
+        <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
     <body>
         
@@ -19,6 +42,7 @@
         <%@include file="ConnectPage.jsp" %>
         
         <%
+        String temp =request.getParameter("branch");
              String sub_code;
              int batch;
             if(request.getParameter("i")!=null && request.getParameter("j")!=null)
@@ -82,6 +106,15 @@
                    %>
      
                    <div class="container">
+                       
+                       <div class="row">
+            <div class="col-md-2">
+        <a href="admin_subject1.jsp?branch=<%=temp%>" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10"></div>
+            
+        </div>
+                        
         <form method="post">
                    <table align="center" >
                 

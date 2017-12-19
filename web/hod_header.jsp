@@ -18,23 +18,23 @@
         
         
 <%@include file="HeaderPage.jsp" %>
-        <div class="row container-fluid" style="background-color: black">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div style="background-color: #428bca">
+              <nav class="navbar">
 
-                  <div class="collapse navbar-collapse" id="navbarColor02" style="font-size: medium">
+                  <div class="container-fluid" style="font-size: medium">
     <ul class="nav navbar-nav" >
-        <li><a href="hod_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
-         <li><a href="hod_view_attendance.jsp" style="color: wheat"> ATTENDANCE</a></li>
-        <li><a href="hod_view_student.jsp " style="color: wheat">STUDENTS</a></li>
-        <li><a href="hod_view_faculty.jsp" style="color: wheat">FACULTY</a></li>
-        <li><a href="hod_view_marks.jsp" style="color: wheat">RESULT</a></li>
-        <li><a href="hod_upload_notice.jsp" style="color: wheat">UPLOAD NOTICE</a></li>
-        <li><a href="hod_subjects.jsp" style="color: wheat">EDIT SUBJECTS</a></li>
-        <li><a href="#" style="color: wheat">UPLOAD SUBJECTS</a></li>
-        <li><a href="#" style="color: wheat">UPLOAD STUDENT LIST</a></li>
+        <li><a href="hod_home.jsp" style="color: white"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+         <li><a href="hod_view_attendance.jsp" style="color: white"> ATTENDANCE</a></li>
+        <li><a href="hod_view_student.jsp " style="color: white">STUDENTS</a></li>
+        <li><a href="hod_view_faculty.jsp" style="color: white">FACULTY</a></li>
+        <li><a href="hod_view_marks.jsp" style="color: white">RESULT</a></li>
+        <li><a href="hod_upload_notice.jsp" style="color: white">UPLOAD NOTICE</a></li>
+        <li><a href="hod_subjects.jsp" style="color: white">EDIT SUBJECTS</a></li>
+        <li><a href="#" style="color: white">UPLOAD SUBJECTS</a></li>
+        <li><a href="#" style="color: white">UPLOAD STUDENT LIST</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="logout.jsp" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+        <li><a href="logout.jsp" style="color: white"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
   </div>
 </nav>

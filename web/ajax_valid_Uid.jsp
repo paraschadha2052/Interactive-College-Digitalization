@@ -19,6 +19,28 @@
             {
                 out.println("Invalid Uid number.");
             }
+        int l=uid.length();
+        if(l>0)
+            {
+               %>
+               <%@include file="ConnectPage.jsp" %>
+               <%
+           if(l>0)
+            {       
+              
+                   String qry ="SELECT UID FROM student WHERE UID='"+uid+"'";
+                   ResultSet rs=smt.executeQuery(qry);   
+                   while(rs.next())
+                   {
+                       %>
+                       UID no. <%= rs.getString(1)%> already in use. 
+                       <%
+                   }
+                                              
+                   con.close();
+               }
+           
+            }
         %>
     </body>
 </html>

@@ -14,6 +14,29 @@
         <link rel="stylesheet" href="css/stylesheet.css">
         
         <link rel="stylesheet" href="css/bootstrap.min.css">
+         <style>
+            .backlink {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+
+backlink:hover {
+    background-color: #2c74b2;
+    color: white;
+}
+
+.previous {
+    background-color: #428BCA;
+    color: white;
+}
+
+
+.round {
+    border-radius: 10%;
+}
+        </style>
     </head>
     <body>
           
@@ -23,6 +46,7 @@
         
         <%@include file="SesssionCheck.jsp" %> 
          <div class="container">
+             
         <%
                 String b=request.getParameter("j");
                 String sub_cod=request.getParameter("x");
@@ -40,6 +64,13 @@
         if(rs2.next())
         {
             %>
+            <div class="row">
+            <div class="col-md-2">
+        <a href="marks1.jsp" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10 centr"></div>
+            
+        </div>
             <H3 align="center" style="color: red; font-size: medium; font-weight: bold ; alignment-adjust: central"> YOU HAD ALREADY UPDATED THE RESULT OF  <%= a %>SUBJECT OF  <%=batch %> BATCH </H3>
        
             <%
@@ -52,6 +83,13 @@
   
         
             <div class="container-fluid">
+                <div class="row">
+            <div class="col-md-2">
+        <a href="marks1.jsp" class="previous round backlink">Back</a>
+            </div>
+            <div class="col-md-10 centr"></div>
+            
+        </div>
                 <form action="marks3.jsp?i=<%=sub_cod%>&j=<%=b%>&k=<%=batch%>" method="post">
             <table class="table table-striped table-hover table-bordered">
   <thead style="background-color: black">
@@ -81,7 +119,7 @@
                                      <td><%=rs.getString(1)%></td>
                                      <td><%=rs.getString(2)%></td>
                                      <td>
-                                         <input type="text"  name="<%=rs.getString(1)%>" size="2" required  > 
+                                         <input type="text"  name="<%=rs.getString(1)%>" size="3" required  > 
                                      </td>
                                      
                                </tr>
