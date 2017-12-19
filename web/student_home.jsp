@@ -85,7 +85,7 @@
                               <div class="col-md-2"><%=rs1.getString(4)%></div>
                                 <div class="col-md-7"><%=rs1.getString(1)%></div>
                                 <div class="col-md-3">
-                                    <a href="./noticeupload/<%=rs1.getString(2)%>" target="_blank">Notice</a>
+                                    <a href="./noticeupload/<%=rs1.getString(2)%>" style="color: #2c74b2" target="_blank">Notice</a>
                                 </div>
                                
                             </div> 
