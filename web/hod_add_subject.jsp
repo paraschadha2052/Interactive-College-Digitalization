@@ -15,12 +15,15 @@
          <%@include file="hod_header.jsp" %>
          <%@include file="ConnectPage.jsp" %>
          <%@include file="SesssionCheck.jsp" %> 
+         
            <%
-         String qry11 = "select department  from faculty where F_id='"+username+"'";
+           
+           String branch="";
+      String qry11 = "select department  from faculty where F_id='"+username+"'";
          ResultSet rs11 = smt.executeQuery(qry11);
          rs11.next();
             
-            String branch=rs11.getString(1);
+             branch=rs11.getString(1); 
             %>
         <div class="container">
             
@@ -86,16 +89,15 @@
       <label for="faculty" class="col-lg-2 control-label">Faculty: </label>
       <div class="col-lg-10">
           <select name="faculty" class="form-control" id="faculty">
-          <%@include file="ConnectPage.jsp" %>
-          <%
-           String qry3 = "select * from faculty " ;
+          <% 
+           String qry3 = "select * from faculty where department='"+branch+"' " ;
             ResultSet rs3 = smt.executeQuery(qry3);
             while(rs3.next())
             {
             %>
               <option value="<%=rs3.getString(1) %>"><%=rs3.getString(2) %></option>
             
-              <% } %>
+              <% }  %>
         </select>
       </div>
     </div>
