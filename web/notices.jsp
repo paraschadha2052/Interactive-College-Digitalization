@@ -15,9 +15,9 @@
         <link rel="stylesheet" href="css/newDesign.css">
         <style>
             .disabled {
-    pointer-events:none; //This makes it not clickable
-    opacity:0.6;         //This grays it out to look disabled
-}
+                pointer-events:none; 
+                opacity:0.6;   
+            }
             </style>
     </head>
     <body>
