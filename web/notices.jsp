@@ -32,8 +32,8 @@
                     int next=Integer.parseInt(request.getParameter("next"));
                     int prev=Integer.parseInt(request.getParameter("prev"));
                     int n=Integer.parseInt(request.getParameter("n"));
-                    int nnpp = 2;
-                    int tnp = 3;
+                    int nnpp = 10;
+                    int tnp = 10;
                     int flag = 0;
                     
                     String qry = "select * from notice order by Date desc";
