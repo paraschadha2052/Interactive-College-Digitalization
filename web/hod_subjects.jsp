@@ -35,7 +35,7 @@
             
         %>
         <div class="row"> 
-            <div class="col-md-2"><p class="admin"><a href="admin_add_subject.jsp" style="color: white">Add Subject</a></p>
+            <div class="col-md-2"><p class="admin"><a href="hod_add_subject.jsp" style="color: white">Add Subject</a></p>
           </div>
         </div>
         <br>
