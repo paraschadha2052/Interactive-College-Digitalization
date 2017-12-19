@@ -16,28 +16,28 @@
     </head>
     <body>
         
-        
 <%@include file="HeaderPage.jsp" %>
-        <div class="row container-fluid" style="background-color: black">
-              <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div style="background-color: #428bca">
+              <nav class="navbar">
 
-                  <div class="collapse navbar-collapse" id="navbarColor02" style="font-size: medium">
+                  <div class="container-fluid" style="font-size: medium">
     <ul class="nav navbar-nav" >
-        <li><a href="admin_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
-         <li><a href="view_attendance.jsp" style="color: wheat">ATTENDANCE</a></li>
-        <li><a href="view_students.jsp " style="color: wheat">STUDENTS</a></li>
-        <li><a href="admin_view_faculty.jsp" style="color: wheat">FACULTY</a></li>
-        <li><a href="admin_view_marks.jsp" style="color: wheat">RESULT</a></li>
-        <li><a href="admin_notice_upload.jsp" style="color: wheat">UPLOAD NOTICE</a></li>
-        <li><a href="admin_subject.jsp" style="color: wheat">EDIT SUBJECTS</a></li>
+        <li><a href="admin_home.jsp" style="color: white"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+         <li><a href="view_attendance.jsp" style="color: white">ATTENDANCE</a></li>
+        <li><a href="view_students.jsp " style="color: white">STUDENTS</a></li>
+        <li><a href="admin_view_faculty.jsp" style="color: white">FACULTY</a></li>
+        <li><a href="admin_view_marks.jsp" style="color: white">RESULT</a></li>
+        <li><a href="admin_notice_upload.jsp" style="color: white">UPLOAD NOTICE</a></li>
+        <li><a href="admin_subject.jsp" style="color: white">EDIT SUBJECTS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="logout.jsp" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+        <li><a href="logout.jsp" style="color: white"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
   </div>
 </nav>
            
 </div>
+       
         
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

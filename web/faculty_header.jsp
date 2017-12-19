@@ -19,18 +19,18 @@
         
         
 <%@include file="HeaderPage.jsp" %>
-        <div class="row container-fluid" style="background-color: black">
+        <div style="background-color: #428bca">
               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
                   <div class="collapse navbar-collapse" id="navbarColor02" style="font-size: medium">
     <ul class="nav navbar-nav" >
-        <li><a href="faculty_home.jsp" style="color: wheat"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
-         <li><a href="mark_attendance.jsp" style="color: wheat">MARK ATTENDANCE</a></li>
-        <li><a href="marks1.jsp" style="color: wheat">ADD RESULT</a></li>
-        <li><a href="faculty_edit_details.jsp" style="color: wheat">EDIT ACCOUNT DETAILS</a></li>
+        <li><a href="faculty_home.jsp" style="color: white"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
+         <li><a href="mark_attendance.jsp" style="color: white">MARK ATTENDANCE</a></li>
+        <li><a href="marks1.jsp" style="color: white">ADD RESULT</a></li>
+        <li><a href="faculty_edit_details.jsp" style="color: white">EDIT ACCOUNT DETAILS</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="logout.jsp" style="color: wheat"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+        <li><a href="logout.jsp" style="color: white"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
       </ul>
   </div>
 </nav>
