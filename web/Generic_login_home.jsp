@@ -280,7 +280,7 @@
                               <div class="col-md-2"><%=rs1.getString(4)%></div>
                                 <div class="col-md-7"><%=rs1.getString(1)%></div>
                                 <div class="col-md-3">
-                                    <a href="./noticeupload/<%=rs1.getString(2)%>" target="_blank"><button type="button" class="btn-primary btn-xs" style="background-color: #028fc0" href="">Download</button></a> 	
+                                    <a href="./noticeupload/<%=rs1.getString(2)%>" target="_blank"><button type="button" class="btn-xs" style="background-color: #428bca ; color: white" href="">Download</button></a> 	
                                    
                                 </div>
                                

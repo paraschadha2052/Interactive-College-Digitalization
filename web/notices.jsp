@@ -80,7 +80,7 @@
                               <div class="col-md-2"><%=rs.getString(4)%></div>
                                 
                                 <div class="col-md-3">
-                                    <a href="./noticeupload/<%=rs.getString(2)%>" target="_blank">Notice</a>
+                                    <a href="./noticeupload/<%=rs.getString(2)%>" style="color: #2c74b2" target="_blank">Notice</a>
                                 </div>
                                
                             </div> 
@@ -121,7 +121,7 @@
                               <div class="col-md-2"><%=rs.getString(4)%></div>
                                 
                                 <div class="col-md-3">
-                                    <a href="./noticeupload/<%=rs.getString(2)%>" target="_blank">Notice</a>
+                                    <a href="./noticeupload/<%=rs.getString(2)%>" style="color: #2c74b2" target="_blank">Notice</a>
                                 </div>
                                
                             </div> 
@@ -157,7 +157,7 @@
                               <div class="col-md-2"><%=rs.getString(4)%></div>
                                 
                                 <div class="col-md-3">
-                                    <a href="./noticeupload/<%=rs.getString(2)%>" target="_blank">Notice</a>
+                                    <a href="./noticeupload/<%=rs.getString(2)%>" style="color: #2c74b2" target="_blank">Notice</a>
                                 </div>
                                
                             </div> 
@@ -187,7 +187,7 @@ else
                               <div class="col-md-2"><%=rs.getString(4)%></div>
                                 
                                 <div class="col-md-3">
-                                    <a href="./noticeupload/<%=rs.getString(2)%>" target="_blank">Notice</a>
+                                    <a href="./noticeupload/<%=rs.getString(2)%>" style="color: #2c74b2" target="_blank">Notice</a>
                                 </div>
                                
                             </div> 
