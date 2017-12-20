@@ -37,7 +37,7 @@
        
         
         <div class="container">
-    <form class="form-horizontal" action="admin_upload_notice" enctype="multipart/form-data" onsubmit="return Upload()" method="post" >
+    <form class="form-horizontal" action="hod_upload_notice" enctype="multipart/form-data" onsubmit="return Upload()" method="post" >
   <fieldset>
     <legend>Upload File</legend>
     

@@ -146,6 +146,21 @@
                     objrequest.send();    
             }
         </script>
+        <script type="text/javascript">
+    function validDetails() {
+        var file = document.getElementById("image");
+        if (typeof (file.files) != "undefined") {
+            var size = parseInt(file.files[0].size / 1024);
+            if(size > 25600){
+            alert("Image size is too large. "+size+" KB.");
+            return false;
+        }
+        } else {
+            alert("This browser does not support HTML5.");
+            return false;
+        }
+    }
+</script>
                          
     </head>
     
@@ -155,7 +170,7 @@
         <div class="container">
             
         
-    <form action="signup.jsp" class="form-horizontal" method="post">
+    <form class="form-horizontal" action="signup_registeration" enctype="multipart/form-data" onsubmit="return validDetails()" method="post">
   <fieldset>
     <legend>Registration Form</legend>
     

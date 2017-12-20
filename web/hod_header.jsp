@@ -30,8 +30,8 @@
         <li><a href="hod_view_marks.jsp" style="color: white">RESULT</a></li>
         <li><a href="hod_upload_notice.jsp" style="color: white">UPLOAD NOTICE</a></li>
         <li><a href="hod_subjects.jsp" style="color: white">EDIT SUBJECTS</a></li>
-        <li><a href="#" style="color: white">UPLOAD SUBJECTS</a></li>
-        <li><a href="#" style="color: white">UPLOAD STUDENT LIST</a></li>
+        <li><a href="hod_upload_subjects.jsp" style="color: white">UPLOAD SUBJECTS</a></li>
+        <li><a href="hod_upload_student_list.jsp" style="color: white">UPLOAD STUDENT LIST</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="logout.jsp" style="color: white"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>

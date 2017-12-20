@@ -22,9 +22,9 @@ import java.text.SimpleDateFormat;
  *
  * @author DV
  */
-@WebServlet(name = "admin_upload_notice", urlPatterns = {"/admin_upload_notice"})
+@WebServlet(name = "hod_upload_notice", urlPatterns = {"/hod_upload_notice"})
 
-public class admin_upload_notice extends HttpServlet {
+public class hod_upload_notice extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -61,12 +61,12 @@ public class admin_upload_notice extends HttpServlet {
                 if (r > 0) 
                 {
                    out.println("<h3>\nYour Notice has been Uploaded Succesfully. \n\nThank you.</h3>\n\n <h2>Redirecting to Home...<h2>");
-                   response.setHeader("Refresh", "3;url=admin_home.jsp");
+                   response.setHeader("Refresh", "3;url=hod_home.jsp");
                 }                  
                    else
                    {
                         out.println("<h3>\nAn error occurred while uploading the Notice. \n\nPlease try agian.</h3>\n\n <h2>Redirecting...<h2>");
-                   response.setHeader("Refresh", "3;url=admin_notice_upload.jsp");
+                   response.setHeader("Refresh", "3;url=hod_upload_notice.jsp");
                    }
                  con.close();
               
@@ -74,7 +74,7 @@ public class admin_upload_notice extends HttpServlet {
                catch(Exception ex)
                        {
                            out.println("<h3>\nAn error occurred while uploading the Notice. \n\nPlease try agian after some time.</h3>\n\n <h2>Redirecting...<h2>");
-                   response.setHeader("Refresh", "3;url=admin_home.jsp");
+                   response.setHeader("Refresh", "3;url=hod_home.jsp");
                        } 
     
             }
