@@ -21,7 +21,7 @@
         
         <div class="container">
             
-    <form class="form-horizontal" action="admin_view_marks1.jsp" method="post">
+    <form class="form-horizontal" action="hod_view_marks1.jsp" method="post">
   <fieldset>
     <legend>CHOOSE CLASS TO VIEW RESULT</legend>
     
